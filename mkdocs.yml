@@ -1,0 +1,28 @@
+site_name: SimuladorQ
+site_description: Simulador de Colas. Proyecto Final Trafico FI-UNRC.
+site_author: Ibarra, Manchado
+repo_url: https://github.com/maxxxis182/trafico/tree/docs
+pages:
+- Introducción: index.md
+- Modelos: Modelos.md
+- Herramientas: Herramientas.md
+- Descarga: Descarga.md
+- Funcionamiento de SimuladorQ: FuncionamientodeSimuladorQ.md
+- Análisis del código: Análisisdelcódigo.md
+- Pruebas de Funcionamiento: PruebasdeFuncionamiento.md
+- Nosotros: Nosotros.md
+- Bibliografía: Bibliografia.md
+
+# the third-party extenison mdx_math.py comes with a setup.py script
+markdown_extensions: 
+    - math:
+        enable_dollar_delimiter: True  
+    - fenced_code
+    - codehilite
+    - footnotes
+    - toc
+    - smarty
+    
+
+# Required to load the MathJax javascript for the mdx_math.py
+extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML']
