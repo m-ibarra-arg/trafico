@@ -25,13 +25,13 @@ Los tiempos de inter-arribo tienen una distribución exponencial, con parámetro
 
 El resultado de la simulación. Tiempos de Inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob//img/prueba_01/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/ArrivalHistogram_normal.png?raw=true )
 
 En cuanto a los tiempos de servicio de la cola:
 
 ![Tiempo servicio Matlab](https://github.com/maxxxis182/trafico/blob/master/docs/img/matlab/prueba_01_espera.png?raw=true )
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docssimuladorQ/img/prueba_01/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/WaitHistogram_normal.png?raw=true )
 
 Se puede ver que en la teoría, la función de distribución tiene amplitud igual a dos, y en el simulador es uno. Esto se debe al tamaño de los paquetes, consecuente con el valor de $\mu$. Al ser muy pronunciada la curva de la distribución con parámetros grandes (ej: $\lambda=2$ ), no se llega  a notar esta diferencia. Pruebe con valores de $\lambda$ mas pequeños, que hacen que la curva decrezca suavemente, y se ve la convergencia de ambas gráficas.  
 
@@ -50,11 +50,11 @@ Aumentando el tiempo de simulación, con respecto a la **Prueba 01**, vemos que 
 
 Tiempos de inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob//img/prueba_02/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_02/ArrivalHistogram_normal.png?raw=true )
 
 Tiempos de servicio:
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docssimuladorQ/img/prueba_02/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_02/WaitHistogram_normal.png?raw=true )
 
 
 ### Prueba 03
@@ -260,6 +260,6 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MzI3MjgzNSwxNTI5NTMzNjE4LC0xNj
+eyJoaXN0b3J5IjpbLTExMDg3NTg4NSwxNTI5NTMzNjE4LC0xNj
 c2NjQ2MjE4LC05MTI2NjEwNTYsLTEwNjA3NzkzMDVdfQ==
 -->
