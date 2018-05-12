@@ -1,6 +1,6 @@
 # Interfaz gráfica
 En esencia, SimuladorQ está compuesto por una ventana principal, en la que se establecen los modelos de colas (según Kendall) disponibles para simular, los cuales son M/M/1, M/G/1 y M/M/1/K. 
-![Ventana Principal](https://github.com/maxxxis182/trafico/blob/master/docs/img/principal.png "Ventana Principal")
+![Ventana Principal](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/principal.png "Ventana Principal")
 
 Una vez elegido el modelo, nos envía a la siguiente ventana, donde podemos ingresar los parámetros de entrada del modelo elegido. 
 Se puede dividir esta pantalla en varias secciones, las cuales describiremos detalladamente a continuación. 
@@ -10,7 +10,7 @@ Se puede dividir esta pantalla en varias secciones, las cuales describiremos det
 En esta sección es donde ingresamos las características principales de cada uno de los modelos dispuestos. 
 
 ### Modelo M/M/1:
-![Ventana Secundaria](https://github.com/maxxxis182/trafico/blob/master/docs/img/mm1.png "Ventana Secundaria")
+![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/mm1.png "Ventana Secundaria")
 - Tasa de arribos $\lambda$, medida en $\frac{bytes}{seg}$
 - Tasa de servicio $\mu$, medida $\frac{bytes}{seg}$
 - Usuario, identificación del cliente
@@ -19,7 +19,7 @@ En esta sección es donde ingresamos las características principales de cada un
 - Bins, para generar histogramas con los resultados. Los valores disponibles son 50, 100, 150 y 200, para elección del usuario.
 	 
 ### Modelo M/G/1:
-![Ventana Secundaria](https://github.com/maxxxis182/trafico/blob/master/docs/img/mg1.png "Ventana Secundaria")
+![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/mg1.png "Ventana Secundaria")
 - Tasa de arribos $\lambda$
  - Distribución de probabilidad general, las disponibles son Normal y Uniforme. La primera necesita los siguientes parámetros Media $\mu$ y Desviación estándar $\sigma$. La segunda, necesita Limite inferior y superior.
 - Usuario
@@ -129,6 +129,6 @@ Para empezar, el uso esta destinado a personas que ya tienen un conocimiento pre
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDIwNjIyNzc0LC00NTQ0MjgwNTYsMjczMD
-k5OTc2XX0=
+eyJoaXN0b3J5IjpbLTE2ODI5NzI5MTAsLTQ1NDQyODA1NiwyNz
+MwOTk5NzZdfQ==
 -->
