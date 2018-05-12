@@ -22,11 +22,10 @@ Los tiempos de inter-arribo tienen una distribución exponencial, con parámetro
 
 ![Tiempo inter-arribo Matlab](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/matlab/prueba_01_arribo.png?raw=true)
 
-**EXPLICAR GRAFICOS DEL SIMULADOR**
-Inter arribos:
+**EXPLICAR GRFICOS DEL SIMULADOR**
 
 El simulador provee 3 histogramas: Tiempos de inter-arribos de paquetes, Tiempos de espera de los paquetes y Tiempos de ocupación del sistema.
-
+#### Tiempos de inter-arribos de paquetes
 Para el caso de los tiempos de inter-arribos de paquetes tenemos que analizar como van a ser servidos los paquetes. Es por eso, que en `modelos.py` se definen
 
 ```python    
@@ -51,7 +50,22 @@ El histograma se genera con el método `.hist` y como argumentos están los arri
 SimuladorQ brinda las opciones de normalización, que hace cambiar los histogramas en cuanto a la representación a proporcionalidad con el área, y además cambia la escala para que el área total sea 1.
 
 
- 
+ . Por defecto `normed = False` la frecuencia es proporcional a la altura, no al área. La opción `normed=True` cambia la representación a proporcionalidad con el área, y además cambia la escala para que el área total sea 1.
+
+#### Tiempos de espera de los paquetes
+Para el caso de los tiempos de espera de los paquetes tenemos que analizar como van a ser servidos los paquetes. Es por eso, que en `modelos.py` se definen
+
+```python    
+	debugSink=False #False, muestra en la salida lo que llega al servidor
+    rec_arrivalsSink=True #Si es verdadero los arribos se graban
+    abs_arrivalsSink=False # true, se graban tiempos de arribo absoluto; False, el tiempo entre arribos consecutivos
+    [...]
+    psink = PacketSink(env, 
+                        debug=debugSink, 
+                        rec_arrivals=rec_arrivalsSink, 
+                        absolute_arrivals=abs_arrivalsSink)
+```
+
 
 
 
@@ -292,5 +306,5 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjA3NzkzMDVdfQ==
+eyJoaXN0b3J5IjpbLTkxMjY2MTA1NiwtMTA2MDc3OTMwNV19
 -->
