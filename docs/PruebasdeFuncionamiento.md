@@ -20,7 +20,7 @@ El sistema es estacionario, es decir $\rho<1$. Los resultados del simulador conv
 
 Los tiempos de inter-arribo tienen una distribución exponencial, con parámetro $\lambda$. Vemos esto gráficamente:
 
-![Tiempo inter-arribo Matlab](github.com/maxxxis182/trafico/blob/simuladorQ/img/matlab/prueba_01_arribo.png?raw=true)
+![Tiempo inter-arribo Matlab](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/matlab/prueba_01_arribo.png?raw=true)
 
 rec_arrivalsSink=True #Si es verdadero los arribos se graban
     abs_arrivalsSink=False # true, se graban tiempos de arribo absoluto; False, el tiempo entre arribos consecutivos
@@ -271,6 +271,6 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTcyMDUwNDYsMTUyOTUzMzYxOCwtMT
+eyJoaXN0b3J5IjpbLTIwMzczODQzODAsMTUyOTUzMzYxOCwtMT
 Y3NjY0NjIxOCwtOTEyNjYxMDU2LC0xMDYwNzc5MzA1XX0=
 -->
