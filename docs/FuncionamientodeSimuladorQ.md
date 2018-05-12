@@ -47,9 +47,9 @@ Para todos los modelos, las variables de salida de la simulación realizada son:
  - Paquetes servidos
  - Paquetes perdidos
 - Porcentaje de pérdida
- - rho$
- - Número medio de bytes en la cola
- - Número medio de bytes en el sistema
+ - $\rho$
+ - Número medio de bytes en la cola L
+ - Número medio de bytes en el sistema $L_q$
  - Tiempo medio de espera $W$, medido en $seg$
  - Tiempo medio de espera en la cola $W_{q}$, medido en $segIntensidad de tráfico $\$
 
@@ -129,5 +129,5 @@ Para empezar, el uso esta destinado a personas que ya tienen un conocimiento pre
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczMDk5OTc2XX0=
+eyJoaXN0b3J5IjpbNTcwNjI0NzEyLDI3MzA5OTk3Nl19
 -->
