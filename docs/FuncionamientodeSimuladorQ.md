@@ -10,7 +10,7 @@ Se puede dividir esta pantalla en varias secciones, las cuales describiremos det
 En esta sección es donde ingresamos las características principales de cada uno de los modelos dispuestos. 
 
 ### Modelo M/M/1:
-![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/simuladorQ/mm1.png "Ventana Secundaria")
+![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/simuladorQ/docs/img/mm1.png "Ventana Secundaria")
 - Tasa de arribos $\lambda$, medida en $\frac{bytes}{seg}$
 - Tasa de servicio $\mu$, medida $\frac{bytes}{seg}$
 - Usuario, identificación del cliente
@@ -129,6 +129,6 @@ Para empezar, el uso esta destinado a personas que ya tienen un conocimiento pre
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2NzM0NjQzMywtNDU0NDI4MDU2LDI3Mz
+eyJoaXN0b3J5IjpbLTMxMjQ3MzgyOSwtNDU0NDI4MDU2LDI3Mz
 A5OTk3Nl19
 -->
