@@ -3,6 +3,7 @@ pages:
  - Introducción: index.md
  - Modelos: Modelos.md
  - Herramientas: Herramientas.md
+ - Generadores en Python: GeneradoresPython.md
  - Funcionamiento de SimuladorQ: FuncionamientodeSimuladorQ.md
  - Análisis del código: Analisisdelcodigo.md
  - Desarrollo de la Interfáz: DesarrolloDeLaInterfaz.md
