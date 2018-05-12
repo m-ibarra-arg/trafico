@@ -90,7 +90,7 @@ Ocurre en la simulación de este modelo, que por tiempos de simulación, paquete
 
 ![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_04/ArrivalHistogram_normal.png?raw=true )
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob//img/prueba_04/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_04/WaitHistogram_normal.png?raw=true )
 
 Ocurre lo mismo que en la **Prueba 01** con respecto a la amplitud del gráfico.
 
@@ -135,7 +135,7 @@ $$ \mu = ({\frac {{Media} *8}{rate}})^{-1}$$
 
 Para verificar $\mu$ del simulador, basta dividir la intensidad de trafico con la tasa de inter-arribo.
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docssimuladorQ/img/prueba_06/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_06/WaitHistogram_normal.png?raw=true )
 
 ![Tiempo inter-arribo Matlab](https://github.com/maxxxis182/trafico/blob/master/docs/img/matlab/prueba_06_espera.png?raw=true)
 
@@ -157,7 +157,7 @@ Si aumentamos la varianza, con respecto a la prueba anterior:
 |  	    		|				|$\mu$	|4.16	|4.1666
 
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob//img/prueba_07/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_07/WaitHistogram_normal.png?raw=true )
 
 Se ve claramente la forma de la distribución Normal. En este caso, los parámetros de performance se alejan de los valores teóricos.
 
@@ -186,7 +186,7 @@ A partir de los valores de **a** y  **b** que introducimos en el simulador, se c
 $$ min = ({\frac {{a} *8}{rate}})$$
 $$ max = ({\frac {{b} *8}{rate}})$$
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docssimuladorQ/img/prueba_08/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_08/WaitHistogram_normal.png?raw=true )
 
 ![Tiempo Servicio de la cola Matlab](https://github.com/maxxxis182/trafico/blob/master/docs/img/matlab/prueba_08_espera.png?raw=true)
 
@@ -208,7 +208,7 @@ Disminuyendo la varianza. Tenemos que acortar el rango de la distribución.
 
 Con respecto a la prueba anterior, los valores mejoraron.
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docssimuladorQ/img/prueba_09/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_09/WaitHistogram_normal.png?raw=true )
 
 ## M/M/1/K
 
@@ -228,7 +228,7 @@ Recordemos que el modelo M/M/1/K es estacionario tanto si $\rho$ es mayor o igua
 
 Si bien el desempeño de la cola es con una intensidad de tráfico menor a uno, nos encontramos con una tasa de pérdida distinta de cero, pequeña en el este caso.
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob//img/prueba_10/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_10/ArrivalHistogram_normal.png?raw=true )
 
 ![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_10/WaitHistogram_normal.png?raw=true )
 
@@ -260,6 +260,6 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDg3NTg4NSwxNTI5NTMzNjE4LC0xNj
+eyJoaXN0b3J5IjpbMTY5NjM2OTg0MCwxNTI5NTMzNjE4LC0xNj
 c2NjQ2MjE4LC05MTI2NjEwNTYsLTEwNjA3NzkzMDVdfQ==
 -->
