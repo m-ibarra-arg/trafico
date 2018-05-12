@@ -281,7 +281,7 @@ A continuación, vemos cómo se realiza el conexionado de cada uno de los bloque
 ```
 En este caso, la conexión nos quedaría de la siguiente manera.
 
-(https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/diagrama.png)
+![](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/diagrama.png)
 
 Una vez todo definido, corremos la simulación, con el tiempo **Tsim**.
 ```python    
@@ -430,5 +430,5 @@ axis.set_ylabel("Frecuencia de ocurrencia")
 fig.savefig(directorio + "QueueHistogram_normal.png")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxODIwMTA0NywtODgxOTYwMjhdfQ==
+eyJoaXN0b3J5IjpbLTI4MTI4Njk1NCwtODgxOTYwMjhdfQ==
 -->
