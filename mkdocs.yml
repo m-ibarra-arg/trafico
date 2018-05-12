@@ -21,26 +21,15 @@ repo_url: https://github.com/maxxxis182/trafico
 extra_javascript: [’/markdownExtension.js’,’/mermaidExtension.js’, 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML']
 
 
-markdown_extensions:
-    - smarty
-    - toc:
-        permalink: True
-    - sane_lists
+# the third-party extenison mdx_math.py comes with a setup.py script
+markdown_extensions: 
+    - math:
+        enable_dollar_delimiter: True  
     - fenced_code
     - footnotes
-    - pymdownx.arithmatex
-    - pymdownx.betterem:
-        smart_enable: all
-    - pymdownx.caret
-    - pymdownx.critic
-    - pymdownx.details
-    - pymdownx.emoji:
-        emoji_generator: !!python/name:pymdownx.emoji.to_svg
-    - pymdownx.inlinehilite
-    - pymdownx.magiclink
-    - pymdownx.mark
-    - pymdownx.smartsymbols
-    - pymdownx.superfences
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.tilde
+    - toc
+    - smarty
+    
+
+# Required to load the MathJax javascript for the mdx_math.py
+extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML']
