@@ -5,7 +5,7 @@ pages:
  - Herramientas: Herramientas.md
  - Generadores en Python: GeneradoresPython.md
  - Funcionamiento de SimuladorQ: FuncionamientodeSimuladorQ.md
- - Análisis del código: Analisisdelcodigo.md
+ - Análisis de Colas con Python: Analisisdelcodigo.md
  - Desarrollo de la Interfáz: DesarrolloDeLaInterfaz.md
  - Pruebas de Funcionamiento: PruebasdeFuncionamiento.md
  - Nosotros: Nosotros.md
