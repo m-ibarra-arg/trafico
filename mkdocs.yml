@@ -19,7 +19,7 @@ theme: readthedocs
 
 repo_url: https://github.com/maxxxis182/trafico
 
-extra_javascript: [’/markdownExtension.js’,’/mermaidExtension.js’, 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML']
+extra_javascript: ['https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML']
 
 
 # the third-party extenison mdx_math.py comes with a setup.py script
