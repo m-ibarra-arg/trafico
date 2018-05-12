@@ -11,6 +11,7 @@ En esta sección es donde ingresamos las características principales de cada un
 
 ### Modelo M/M/1:
 ![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/mm1.png "Ventana Secundaria")
+
 - Tasa de arribos $\lambda$, medida en $\frac{bytes}{seg}$
 - Tasa de servicio $\mu$, medida $\frac{bytes}{seg}$
 - Usuario, identificación del cliente
@@ -20,6 +21,7 @@ En esta sección es donde ingresamos las características principales de cada un
 	 
 ### Modelo M/G/1:
 ![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/mg1.png "Ventana Secundaria")
+
 - Tasa de arribos $\lambda$
  - Distribución de probabilidad general, las disponibles son Normal y Uniforme. La primera necesita los siguientes parámetros Media $\mu$ y Desviación estándar $\sigma$. La segunda, necesita Limite inferior y superior.
 - Usuario
@@ -30,6 +32,7 @@ En esta sección es donde ingresamos las características principales de cada un
 ### Modelo M/M/1/K:
 
 ![Ventana Secundaria](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/mm1k.png "Ventana Secundaria")
+
 - Tasa de arribos $\lambda$
 - Media de paquetes (o servicio) $\mu$
 - Largo de cola K. Los valores disponibles van de 10 en 10 hasta 100.
@@ -129,6 +132,6 @@ Para empezar, el uso esta destinado a personas que ya tienen un conocimiento pre
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODI5NzI5MTAsLTQ1NDQyODA1NiwyNz
-MwOTk5NzZdfQ==
+eyJoaXN0b3J5IjpbLTE2NjExNDY1OTYsLTE2ODI5NzI5MTAsLT
+Q1NDQyODA1NiwyNzMwOTk5NzZdfQ==
 -->
