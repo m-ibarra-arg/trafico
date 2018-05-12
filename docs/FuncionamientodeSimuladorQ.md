@@ -1,6 +1,6 @@
 # Interfaz gráfica
 En esencia, SimuladorQ está compuesto por una ventana principal, en la que se establecen los modelos de colas (según Kendall) disponibles para simular, los cuales son M/M/1, M/G/1 y M/M/1/K. 
-![Ventana Principal](https://github.com/maxxxis182/trafico/blob/docs/principal.png?raw=true "Ventana Principal")
+![Ventana Principal](/img/principal.png "Ventana Principal")
 
 Una vez elegido el modelo, nos envía a la siguiente ventana, donde podemos ingresar los parámetros de entrada del modelo elegido. 
 Se puede dividir esta pantalla en varias secciones, las cuales describiremos detalladamente a continuación. 
@@ -10,7 +10,7 @@ Se puede dividir esta pantalla en varias secciones, las cuales describiremos det
 En esta sección es donde ingresamos las características principales de cada uno de los modelos dispuestos. 
 
 ### Modelo M/M/1:
-![Ventana Secundaria](https://github.com/maxxxis182/trafico/blob/docs/mm1.png?raw=true "Ventana Secundaria")
+![Ventana Secundaria](/img/mm1.png "Ventana Secundaria")
 - Tasa de arribos $\lambda$, medida en $\frac{bytes}{seg}$
 - Tasa de servicio $\mu$, medida $\frac{bytes}{seg}$
 - Usuario, identificación del cliente
@@ -19,9 +19,9 @@ En esta sección es donde ingresamos las características principales de cada un
 - Bins, para generar histogramas con los resultados. Los valores disponibles son 50, 100, 150 y 200, para elección del usuario.
 	 
 ### Modelo M/G/1:
-![Ventana Secundaria](https://github.com/maxxxis182/trafico/blob/docs/mg1.png?raw=true "Ventana Secundaria")
+![Ventana Secundaria](/img/mg1.png "Ventana Secundaria")
 - Tasa de arribos $\lambda$
- - Distribución de probabilidad general, las disponibles son Normal y Uniforme. La primeral necesita los siguientes parámetros Media $\mu$ y Desviación estándar $\sigma$. La segunda, necesita Limite inferior y superior.
+ - Distribución de probabilidad general, las disponibles son Normal y Uniforme. La primera necesita los siguientes parámetros Media $\mu$ y Desviación estándar $\sigma$. La segunda, necesita Limite inferior y superior.
 - Usuario
 - Bitrate de salida
 - Tiempo de simulación
@@ -29,7 +29,7 @@ En esta sección es donde ingresamos las características principales de cada un
  	 
 ### Modelo M/M/1/K:
 
-![Ventana Secundaria](https://github.com/maxxxis182/trafico/blob/docs/mm1k.png?raw=true "Ventana Secundaria")
+![Ventana Secundaria](/img/mm1k.png "Ventana Secundaria")
 - Tasa de arribos $\lambda$
 - Media de paquetes (o servicio) $\mu$
 - Largo de cola K. Los valores disponibles van de 10 en 10 hasta 100.
@@ -43,16 +43,16 @@ Una vez determinados los parámetros, se puede efectuar la simulación presionan
 ## Parámetros de salida
 Para todos los modelos, las variables de salida de la simulación realizada son:
 
- - Tiempo medio de espera $W$, medido en $seg$
- - Tiempo medio de espera en la cola $W_{q}$, medido en $seg$
  - Paquetes enviados
  - Paquetes servidos
  - Paquetes perdidos
- - Porcentaje de pérdida
+- Porcentaje de pérdida
+ - rho$
  - Número medio de bytes en la cola
  - Número medio de bytes en el sistema
- - Intensidad de tráfico $\rho$
- 
+ - Tiempo medio de espera $W$, medido en $seg$
+ - Tiempo medio de espera en la cola $W_{q}$, medido en $segIntensidad de tráfico $\$
+
 ## Detalle de los paquetes servidos
 En esta sección, se puede identificar los paquetes que han sido enviados y que lograron servirse. La información que está disponible de cada paquete es:
 
@@ -84,14 +84,12 @@ Por encima de las secciones antes mencionadas se encuentra el menú del programa
 	- Parámetros de entrada. Sirve para posteriormente poder importarlos y realizar una simulación.
 	- Parámetros de salida. Contiene información de los valores de entrada, y su salida correspondiente.
 	-  Información de secuencia de paquetes. Contiene información de los valores de entrada, y el detalle de los paquetes servidos (visto en la sección *Detalle de los paquetes servidos*). Se debe darle un nombre y escoger el directorio donde se va a guardar.
-	- Guardar gráficos: Normalizados o sin normalizar
-	- Todo. Genera un solo archivo que contiene la información de los parámetros de entrada, de salida y el detalle de los paquetes servidos. Ademas crea una carpeta con el nombre *Gráficos - SimuladorQ_ fecha_hora* que contiene los histogramas del modelo simulado, tanto normalizados, como no normalizados.
+	- Todo. Genera una carpeta, llamada *SimuladorQ-MODELO __ hora _ fecha,* que contiene un archivo con la información de los parámetros de entrada, de salida y el detalle de los paquetes servidos. Ademas crea una carpeta dentro con el nombre *Gráficos - SimuladorQ_ fecha_hora* que contiene los histogramas del modelo simulado, tanto normalizados, como no normalizados.
 
-En todos los casos que se generen archivos, se debe escoger el nombre y el directorio donde se guardarán. Todos ellos, salvo los histogramas, tienen una extensión propia del programa, la cual es *.siq* (por SimuladorQ). Por ejemplo: `parametros_entrada.siq`. Esto es así, salvo que se indique lo contrario al ingresar el nombre del archivo a generar (*.txt* es recomendado también, disponible para elección) Los gráficos tienen una extensión por defecto *.png*. 
+En todos los casos que se generen archivos, se debe escoger el nombre y el directorio donde se guardarán. Salvo los histogramas, todos los archivos tienen una extensión propia del programa, la cual es *.siq* (por SimuladorQ). Por ejemplo: `parametros_entrada.siq`. Esto es así, salvo que se indique lo contrario al ingresar el nombre del archivo a generar (*.txt* es recomendado también, disponible para elección) Los gráficos tienen una extensión por defecto *.png* . 
 
 ### Simulación
 - Correr simulación
-- Interrumpir simulación actual
 - Resetear parámetros
 	 
 ### Ayuda
@@ -99,15 +97,40 @@ En todos los casos que se generen archivos, se debe escoger el nombre y el direc
 	- Sobre Python
 	- Sobre PyQt
 	- Librerías utilizadas
-			 - Simpy
+		- Simpy
 	 - Información Adicional
-	 - Acerca de SimuladorQ
+		 - Tutorial Python
+		 - Tutorial PyQt
+		 - Generadores y corutinas
+	
+## Posibles errores de uso
 
-## Errores de simulación
+Para empezar, el uso esta destinado a personas que ya tienen un conocimiento previo en el análisis de colas. Es decir, que si bien la entrada de valores para la simulación es libre, existen rangos o limites al momento de simular. El objetivo es tratar de representar los escenarios de la manera mas cercana la realidad que se pueda, por eso es que algunas veces, con determinados parámetros de entrada, el usuario puede incurrir en errores y concretar una simulación. Los errores comunes pueden ser, según cada modelo:
 
+ - **Errores por falta de permisos.** Sucede cuando intentamos guardar parámetros o resultados en archivos *.siq* o *.txt* en directorios en los cuales no tenemos acceso para leer (*r*), escribir (*w*) o ejecutar (*x*). Esto depende del usuario que ejecute el software y el alcance de permisos *(r, w, x)* que tenga. Sucede lo mismo cuando deseamos exportar toda la simulación con el menú: *Archivo -> Guardar -> Todo*, que genera una nueva carpeta con información de la simulación realizada. Si no tenemos los permisos necesario para determinar el lugar donde se va a crear la carpeta, se nos avisará con un mensaje de error.
+  
+ - **Errores de no simulación.** Sucede cuando pretendemos guardar parámetros o algún aspecto de la simulación pero no la hemos realizado aun. Puede suceder también si en el medio de la simulación ocurrió un imprevisto y no se termino de realizar correctamente. Es necesario revisar las entradas, y modificarlas dentro de los rangos establecidos.
+ 
+ - **Errores por falta de parámetros de entrada.** Ninguna simulación puede ejecutarse si no están correctamente seteados los parámetros de entrada. SimuladorQ no omite ningún parámetro, ni tampoco tiene entradas por defecto para obviar el defecto en ellas.
 
+ - **Errores por ingreso incorrecto de parámetros de entrada.** Cuando incurrimos en estos tipos de error, el software nos lo advierte con un mensaje de error, con los alcances del parámetro y las recomendaciones correspondientes para solucionarlo. Varían de modelo a modelo y generalmente tiene que ver con la matemática del calculo de la simulación. Por eso, también recomendamos la lectura de la bibliografía, la teoría sobre colas, y la documentación del programa para facilitar el uso.
+ 
+ - **Errores externos y otros errores.** Pueden ocurrir otros errores que no estén previstos, ya sea por deficiencia en las librerías (actualización o desactualización de las mismas, error de instalación, etc), borrado accidental de componentes, y demás cosas ajenas que atenten con el correcto funcionamiento. Ante estas situaciones, SimuladorQ puede capturar en un mensaje de error la salida de la terminal de Python y dar detalle de lo ocurrido. No garantizamos que pueda solucionarse con modificar aspectos superficiales, quizás simplemente no pueda realizarse la acción debido a las causas antes mencionadas. Sería necesario acudir al código para verlo con mas detenimiento. Para eso, diríjase a nuestra web de Github. Tampoco garantizamos que todos los errores externos sean capturados. En el peor de los casos, es necesario verificar en la terminal de Python para poder salvarlo. 
+
+### Recomendaciones finales
+
+- Para un mejor uso, se recomienda instalar el programa en una carpeta que no este usada por otros archivos. 
+
+- La generación de histogramas es temporal, por ende al cerrar el programa se eliminan. Si necesita exportarlos, hágalo al momento de terminar la simulación por los medios antes indicados. Si realiza otra simulación, el histograma correspondiente a la nueva ejecución reescribirá el anterior gráfico. Estos se generan en la carpeta temporal *temp_graficos*, en el path destinado a los archivos de ejecución.
+
+- Por más que estén seteados los mismos parámetros de entrada, entre una simulación y otra, los resultados pueden ser diferentes. Recuerde que trabajamos con variables aleatorias, y los modelos de generación de paquetes son estocásticos.  - Acerca de SimuladorQ
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM0MzM2NTIwLDExMzEwNzQ5MTcsLTExND
-g2MjgxOTcsMTEyOTk0NTE5MiwtMTYxOTk3MDY4XX0=
+eyJoaXN0b3J5IjpbMTQ1NzU1MDM1NCwtNzc2ODMzNDQ3LC05Nj
+g5MjE0MzAsLTM3ODk2NjY4NiwtOTkzMTU4NDgxLDY0ODEzMDA1
+MSwxNDk2NjIzNTg3LC05NzEzNjE1MjUsLTU4NDE1MjkwNiwyOD
+UzMTI4NywxNzczNDQ1NjQ1LDE4Mjk0NDE3NjEsMTEzMTA3NDkx
+NywxNDk1NTAyMTAwLDEyODI5NzUwMDMsLTExNDg2MjgxOTcsMz
+A5MjkwNTI3LDE3NDI0ODYxODQsLTUwNTY4MjQzMSwxMTI5OTQ1
+MTkyXX0=
 -->

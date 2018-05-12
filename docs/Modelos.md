@@ -106,7 +106,7 @@ Cualquier sistema de colas de este tipo alcanza en algún momento el estado esta
 Probabilidad de estado estacionario
 $$ p_0 = 1 - ρ $$
 Número medio de clientes en la cola. Bytes en la cola de la simulación.
-$$L_q =\frac{ λ^2σ^2 + ρ}{2(1-ρ)}$$
+$$L_q =\frac{ λ^2σ^2 + ρ^2}{2(1-ρ)}$$
 Número medio de clientes en el sistema.
 $$L = L_q + ρ$$
 Tiempo medio de espera en la cola
@@ -120,7 +120,9 @@ Obsérvese que las medidas de eficiencia incrementan su valor conforme $σ^2$ au
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzc5NDYzMzAsLTQ0Mjg4NzQzNSwxMz
-Q2NjU1MzcyLC0xNDEzMDc4MzI4LC0xMjY5Nzc3ODE1LDE5MTU4
-NjkwNTJdfQ==
+eyJoaXN0b3J5IjpbMjE0NjI2ODg1OCwtMTY3Nzk0NjMzMCwtND
+QyODg3NDM1LDEzNDY2NTUzNzIsLTEzNzM4ODcxOTEsMTM0NjY1
+NTM3MiwtMTM3Mzg4NzE5MSwxMzQ2NjU1MzcyLC0xNDEzMDc4Mz
+I4LC0xMjY5Nzc3ODE1LC01MjY3MDU4NTAsLTEyNjk3Nzc4MTUs
+MjEwNzY1MDgxNSwxOTE1ODY5MDUyLDk1MzIwNDQyNl19
 -->

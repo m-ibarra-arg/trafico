@@ -15,7 +15,7 @@ El entorno de desarrollo integrado (IDE) que se utilizo fue [**Spyder**](https:/
 
 Una simulación de eventos discretos es aquella en la que los cambios de estado de las variables se realizan en puntos discretos del tiempo accionados por eventos. Eventos de simulación típicos pueden incluir la llegada de un cliente, la falla de un recurso, la terminación de una actividad, la finalización de un turno de trabajo.
 
-Los procesos en SimPy están definidos por las funciones [**generator**](https://docs.python.org/3/glossary.html#term-generator) de Python y pueden, por ejemplo, usarse para modelar componentes activos como clientes, vehículos o agentes. SimPy también proporciona varios tipos de recursos compartidos para modelar puntos de congestión de capacidad limitada (como servidores, buffer y túneles).
+Los procesos en SimPy están definidos por las funciones [**generator**](https://docs.python.org/3/glossary.html#term-generator) de Python y pueden, por ejemplo, usarse para modelar componentes activos como clientes, vehículos o agentes. SimPy también proporciona varios tipos de recursos compartidos para modelar puntos de congestión de capacidad limitada (como servidores, bfer y túneles).
 
 Las simulaciones se pueden realizar en tiempo real o recorriendo manualmente los eventos.
 
@@ -50,5 +50,10 @@ Python es un lenguaje simple pero poderoso orientado a objetos. Su simplicidad h
 PyQt combina todas las ventajas de Qt y Python. Un programador tiene todo el poder de Qt, pero es capaz de explotarlo con la simplicidad de Python. Es por todo esto que utilizamos el binding antes mencionado para crear la interfaz gráfica de SimuladorQ.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTI2ODY0NzMsMTI3MzE3MTc3OV19
+eyJoaXN0b3J5IjpbMTA1MDk2MTgzMiwtMTIyNDc4MzM0LC0xMj
+kyNjg2NDczLC0xMDIxMzgyMTk2LDE2OTcxMDEwMjgsODUyOTM0
+MTExLDEyNzMxNzE3NzksNjgwNjk4NTgzLDE2MzUwMjg4NDAsMT
+k5Mzc5NTM2NywxNjA2MzExNjkwLC0zNjQ2MTg1NDgsMTM2MDQ3
+ODM3OSwxODU1NDU3MDUyLC03MjkwODM4OTEsLTEwNzEzMzk5Mj
+UsMTc0MzU2MjUyOSwtNDY0OTg0NTA3XX0=
 -->

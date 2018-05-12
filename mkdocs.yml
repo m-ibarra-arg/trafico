@@ -1,28 +1,46 @@
-site_name: SimuladorQ
-site_description: Simulador de Colas. Proyecto Final Trafico FI-UNRC.
-site_author: Ibarra, Manchado
-repo_url: https://github.com/maxxxis182/trafico/tree/docs
+site_name: SimuladorQ 
 pages:
-- Introducción: index.md
-- Modelos: Modelos.md
-- Herramientas: Herramientas.md
-- Descarga: Descarga.md
-- Funcionamiento de SimuladorQ: FuncionamientodeSimuladorQ.md
-- Análisis del código: Análisisdelcódigo.md
-- Pruebas de Funcionamiento: PruebasdeFuncionamiento.md
-- Nosotros: Nosotros.md
-- Bibliografía: Bibliografia.md
+ - Introducción: index.md
+ - Modelos: Modelos.md
+ - Herramientas: Herramientas.md
+ - Funcionamiento de SimuladorQ: FuncionamientodeSimuladorQ.md
+ - Análisis del código: Análisisdelcódigo.md
+ - Pruebas de Funcionamiento: PruebasdeFuncionamiento.md
+ - Nosotros: Nosotros.md
+ - Descarga: Descarga.md
+ - Bibliografía: Bibliografia.md
 
-# the third-party extenison mdx_math.py comes with a setup.py script
-markdown_extensions: 
-    - math:
-        enable_dollar_delimiter: True  
-    - fenced_code
-    - codehilite
-    - footnotes
-    - toc
+site_description: Simulador de Colas. Proyecto Final Trafico FI-UNRC.
+
+site_author: Ibarra, Manchado
+
+theme: readthedocs
+
+repo_url: https://github.com/maxxxis182/trafico
+
+extra_javascript: [’/markdownExtension.js’,’/mermaidExtension.js’, 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML']
+
+
+markdown_extensions:
     - smarty
-    
-
-# Required to load the MathJax javascript for the mdx_math.py
-extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML']
+    - toc:
+        permalink: True
+    - sane_lists
+    - fenced_code
+    - footnotes
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_generator: !!python/name:pymdownx.emoji.to_svg
+    - pymdownx.inlinehilite
+    - pymdownx.magiclink
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.superfences
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
