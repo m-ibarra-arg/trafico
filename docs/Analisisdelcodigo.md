@@ -281,12 +281,7 @@ A continuación, vemos cómo se realiza el conexionado de cada uno de los bloque
 ```
 En este caso, la conexión nos quedaría de la siguiente manera.
 
-```mermaid
-graph LR
-A((PacketGenerator)) -- Tasa de Inter Arribo --> 
-B[SwitchPort] 
-B -- Tasa de Servicio --> C((PacketSink))
-```
+(https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/diagrama.png)
 
 Una vez todo definido, corremos la simulación, con el tiempo **Tsim**.
 ```python    
@@ -368,7 +363,72 @@ La función MM1K trabaja de la misma manera que MM1, con la salvedad de que en e
 def MM1K(lamda, mu, ql, user, port_rate, Tsim, bins, directorio):
 ```
 
+## Histogramas
 
+El simulador provee 3 histogramas: Tiempos de inter-arribos de paquetes, Tiempos de espera de los paquetes y Tiempos de ocupación del sistema.
+
+### Tiempos de inter-arribos de paquetes
+Para el caso de los tiempos de inter-arribos de paquetes tenemos que analizar como van a ser servidos los paquetes. Es por eso, que en `modelos.py` se definen
+
+```python    
+	debugSink=False #False, muestra en la salida lo que llega al servidor
+    rec_arrivalsSink=True #Si es verdadero los arribos se graban
+    abs_arrivalsSink=False # true, se graban tiempos de arribo absoluto; False, el tiempo entre arribos consecutivos
+    [...]
+    psink = PacketSink(env, 
+                        debug=debugSink, 
+                        rec_arrivals=rec_arrivalsSink, 
+                        absolute_arrivals=abs_arrivalsSink)
+```
+El servidor esta definido para que no se muestre en el programa lo que llega al servidor, porque no nos enfocamos en el específicamente, sino en la cola, y lo que entra, transcurre y sale de ella. Además solo nos interesan los tiempos entre arribos consecutivos, y no los absolutos.
+La variable `psink` indica que recibe paquetes y recopila información de delay en la lista de espera de paquetes.
+
+Ahora bien, para graficar el histograma, se realiza de la siguiente forma:
+```python    
+fig, axis = plt.subplots()
+axis.hist(psink.arrivals, bins, normed=True, alpha=1, edgecolor = 'black',  linewidth=1)
+axis.set_title("Tiempos de Inter-Arribo a la Cola - Normalizado")
+axis.set_xlabel("Tiempo")
+axis.set_ylabel("Frecuencia de ocurrencia")
+fig.savefig(directorio + "ArrivalHistogram_normal.png")
+```
+El histograma se genera con el método `.hist` y como argumentos están los arribos (`psink.arrivals`); los bins (explicados en la sección de *Funcionamiento de SimuladorQ*); si se desea que este normalizado o no (`normed=True` o `normed = False`); el grado de opacidad (`alpha=1`), en nuestro caso al máximo; color de bordes de las barras (`edgecolor = 'black'`) y su grosor (`linewidth = 1`).
+
+SimuladorQ brinda las opciones de normalización. Por defecto `normed = False` la frecuencia es proporcional a la altura, no al área. La opción `normed=True` cambia la representación a proporcionalidad con el área, y además cambia la escala para que el área total sea 1.
+
+### Tiempos de espera de los paquetes
+Para el caso de los tiempos de espera de los paquetes hacemos un análisis similar al de los tiempos de inter-arribo, porque lo vemos con `psink`, pero ahora solicitamos el tiempo de espera que experimentan los paquetes con `psink.waits`. El resto se mantiene igual en el código, pero cambiamos `psink.arrivals` por `psink.waits`.
+
+### Tiempo de ocupación en el sistema
+Para el caso de los tiempos de ocupación en el sistema el análisis es parecido a los anteriores. Solo agregamos un monitor en la cola.
+
+```python    
+#Parametros del Monitor 
+       Smd= 0.5
+       samp_dist = functools.partial(random.expovariate,Smd)
+       [...]
+       switch_port= SwitchPort(env, 
+                                rate=port_rate, 
+                                qlimit=ql)
+       [...]
+# PortMonitor para rastrear los tamaños de cola a lo largo del tiempo
+       pm = PortMonitor(env, 
+                        switch_port, 
+                        samp_dist)
+```
+Se utiliza `PortMonitor` para controlar el tamaño de la cola a lo largo del tiempo para un `SwitchPort`. Observa la cantidad de elementos en `SwitchPort` en servicio en la cola y registra esa información en la lista de `sizes`. El monitor mira el puerto a intervalos de tiempo dados por la distribución elegida. 
+
+Se especifica una distribución de muestreo, es decir, una distribución que proporcione el tiempo entre muestras sucesivas. Para todos los casos y modelos, se utiliza un distribución exponencial especificando su tasa de arribo. En este caso usamos $\lambda = Smd = 0.5$. Al `SwitchPort` se le da como argumento la tasa de salida de la cola`port_rate`, y el limite de la cola `qlimit`(infinito para todas los modelos, salvo para el M/M/1/K). 
+
+Para graficar el histograma, es bastante parecido a los anteriores, cambia en el argumento `pm.sizes` para trabajar con los tamaños de los paquetes de la cola.
+```python    
+fig, axis = plt.subplots()
+axis.hist(pm.sizes, bins, normed=True, alpha=1, edgecolor = 'black',  linewidth=1)
+axis.set_title("Tiempos de Ocupación del Sistema - Normalizado")
+axis.set_xlabel("Nro")
+axis.set_ylabel("Frecuencia de ocurrencia")
+fig.savefig(directorio + "QueueHistogram_normal.png")
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4MTk2MDI4XX0=
+eyJoaXN0b3J5IjpbMTcxODIwMTA0NywtODgxOTYwMjhdfQ==
 -->
