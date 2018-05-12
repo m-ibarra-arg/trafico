@@ -293,9 +293,9 @@ Recordemos que el modelo M/M/1/K es estacionario tanto si $\rho$ es mayor o igua
 
 Si bien el desempeño de la cola es con una intensidad de tráfico menor a uno, nos encontramos con una tasa de pérdida distinta de cero, pequeña en el este caso.
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/prueba_10/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_10/ArrivalHistogram_normal.png?raw=true )
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/prueba_10/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_10/WaitHistogram_normal.png?raw=true )
 
 Vemos que los tiempos de inter-arribo y de servicio, responden a una distribución exponencial.
 
@@ -314,17 +314,17 @@ Con un sistema recargado, $\rho>1$:
 
 La perdida es considerable. Tenemos una longitud de la cola, u ocupación media del sistema, casi del %75 de la longitud de la misma.
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/prueba_11/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_11/ArrivalHistogram_normal.png?raw=true )
 
 Vemos como se va llenando la cola de forma exponencial.
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/prueba_11/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_11/WaitHistogram_normal.png?raw=true )
 
 ## Conclusiones
 
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTQ1OTY3NzQsLTE2NzY2NDYyMTgsLT
-kxMjY2MTA1NiwtMTA2MDc3OTMwNV19
+eyJoaXN0b3J5IjpbMTUyOTUzMzYxOCwtMTY3NjY0NjIxOCwtOT
+EyNjYxMDU2LC0xMDYwNzc5MzA1XX0=
 -->
