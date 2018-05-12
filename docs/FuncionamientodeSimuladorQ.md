@@ -1,6 +1,6 @@
 # Interfaz gráfica
 En esencia, SimuladorQ está compuesto por una ventana principal, en la que se establecen los modelos de colas (según Kendall) disponibles para simular, los cuales son M/M/1, M/G/1 y M/M/1/K. 
-![Ventana Principal](https://raw.githubusercontent.com/maxxxis182/trafico/simuladorQ/principal.png "Ventana Principal")
+![Ventana Principal](https://github.com/maxxxis182/trafico/blob/master/docs/img/principal.png "Ventana Principal")
 
 Una vez elegido el modelo, nos envía a la siguiente ventana, donde podemos ingresar los parámetros de entrada del modelo elegido. 
 Se puede dividir esta pantalla en varias secciones, las cuales describiremos detalladamente a continuación. 
@@ -129,5 +129,6 @@ Para empezar, el uso esta destinado a personas que ya tienen un conocimiento pre
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDQyODA1NiwyNzMwOTk5NzZdfQ==
+eyJoaXN0b3J5IjpbMTE2NzM0NjQzMywtNDU0NDI4MDU2LDI3Mz
+A5OTk3Nl19
 -->
