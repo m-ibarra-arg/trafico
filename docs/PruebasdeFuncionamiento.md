@@ -90,13 +90,13 @@ fig.savefig(directorio + "QueueHistogram_normal.png"rec_arrivalsSink=True #Si es
 
 El resultado de la simulación. Tiempos de Inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_01/ArrivalHis/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_01/ArrivalHistogram_normal.png?raw=true )
 
 En cuanto a los tiempos de servicio de la cola:
 
-![Tiempo servicio Matlab](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/matlab/prueba_01_espera.png?raw=true )
+![Tiempo servicio Matlab](https://github.com/maxxxis182/trafico/blob/master/docs/img/matlab/prueba_01_espera.png?raw=true )
 
-![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/prueba_01/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_01/WaitHistogram_normal.png?raw=true )
 
 Se puede ver que en la teoría, la función de distribución tiene amplitud igual a dos, y en el simulador es uno. Esto se debe al tamaño de los paquetes, consecuente con el valor de $\mu$. Al ser muy pronunciada la curva de la distribución con parámetros grandes (ej: $\lambda=2$ ), no se llega  a notar esta diferencia. Pruebe con valores de $\lambda$ mas pequeños, que hacen que la curva decrezca suavemente, y se ve la convergencia de ambas gráficas.  
 
@@ -325,6 +325,6 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzE0MDU5NjcsLTE2NzY2NDYyMTgsLT
-kxMjY2MTA1NiwtMTA2MDc3OTMwNV19
+eyJoaXN0b3J5IjpbLTk5NTE1NTk5MywtMTY3NjY0NjIxOCwtOT
+EyNjYxMDU2LC0xMDYwNzc5MzA1XX0=
 -->
