@@ -90,7 +90,7 @@ fig.savefig(directorio + "QueueHistogram_normal.png"rec_arrivalsSink=True #Si es
 
 El resultado de la simulación. Tiempos de Inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/simuladorQ/img/prueba_01/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](github.com/maxxxis182/trafico/blob/master/docs/img/prueba_01/ArrivalHistogram_normal.png?raw=true )
 
 En cuanto a los tiempos de servicio de la cola:
 
@@ -325,6 +325,6 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwNDMxNTM3MCwtOTEyNjYxMDU2LC0xMD
-YwNzc5MzA1XX0=
+eyJoaXN0b3J5IjpbLTE2NzY2NDYyMTgsLTkxMjY2MTA1NiwtMT
+A2MDc3OTMwNV19
 -->
