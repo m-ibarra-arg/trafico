@@ -48,7 +48,7 @@ axis.hist(psink.arrivals, bins, normed=True, alpha=1, edgecolor = 'black',  line
 ```
 El histograma se genera con el método `.hist` y como argumentos están los arribos (`psink.arrivals`); los bins (explicados en la sección de *Funcionamiento de SimuladorQ*); si se desea que este normalizado o no (`normed=True` o `normed = False`); el grado de opacidad (`alpha=1`), en nuestro caso al máximo; color de bordes de las barras (`edgecolor = 'black'`) y su grosor (`linewidth = 1`).
 
-SimuladorQ brinda las opciones 
+SimuladorQ brinda las opciones de normalización, que hace cambiar los histogramas en cuanto a la representación a proporcionalidad con el área, y además cambia la escala para que el área total sea 1.
 
 
  
@@ -292,5 +292,5 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMjg2ODMwODVdfQ==
+eyJoaXN0b3J5IjpbLTEwNjA3NzkzMDVdfQ==
 -->
