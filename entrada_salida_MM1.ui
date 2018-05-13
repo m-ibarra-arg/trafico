@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>entrada_salida_mm1</class>
+ <widget class="QMainWindow" name="entrada_salida_mm1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>723</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SimuladorQ - M/M/1</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>Im/logo simulatorQ.png</normaloff>Im/logo simulatorQ.png</iconset>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>24</width>
+    <height>24</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0" rowspan="4">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_entrada">
+          <property name="title">
+           <string>Parámetros de entrada</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_lambda">
+             <property name="text">
+              <string>Tasa de arribos λ [bytes/seg]:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="line_lambda"/>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_mu">
+             <property name="text">
+              <string>Tasa de servicio μ [bytes/seg]:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="line_mu"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_user">
+             <property name="text">
+              <string>Usuario:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="line_user">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nombre del usuario o cliente que va a utilizar la cola&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_portrate">
+             <property name="text">
+              <string>Bitrate de salida [bps]:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="line_portrate">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tasa de bit que son servidos en la cola&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_tsim">
+             <property name="text">
+              <string>Tiempo de simulacion [seg]:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="line_tsim">
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiempo recomendado entre 1000 y 100000. Mientras mayor sea el tiempo, mayor la canitdad de paquetes generados, y por ende, mayor uso de CPU.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_bins">
+             <property name="text">
+              <string>Bins:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QComboBox" name="comboBox_bins">
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>Seleccione</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>50</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>100</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>150</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>200</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+          <zorder>label_portrate</zorder>
+          <zorder>line_lambda</zorder>
+          <zorder>line_mu</zorder>
+          <zorder>label_mu</zorder>
+          <zorder>label_tsim</zorder>
+          <zorder>line_user</zorder>
+          <zorder>line_portrate</zorder>
+          <zorder>line_tsim</zorder>
+          <zorder>label_user</zorder>
+          <zorder>label_lambda</zorder>
+          <zorder>label_bins</zorder>
+          <zorder>comboBox_bins</zorder>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="push_simular">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Simular</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="push_reset">
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Borrar todos los parámetros de entrada&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>Reset</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_salida">
+        <property name="title">
+         <string>Parámetros de salida</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="line_pkt_enviados">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cantidad de paquetes que envía el cliente&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_pkt_recibidos">
+           <property name="text">
+            <string>Paquetes servidos:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_tasa_perdida">
+           <property name="text">
+            <string>Pérdida:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="line_pkt_recibidos">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cantidad de paquetes que llegan al servidor&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_inten_trafico">
+           <property name="text">
+            <string>Intensidad de tráfico [ρ]: </string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="0">
+          <widget class="QLabel" name="label_espera_cola_Wq">
+           <property name="text">
+            <string>Tiempo medio de espera en la cola Wq [seg]:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLineEdit" name="line_twait_medio"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="label_twait_medio">
+           <property name="text">
+            <string>Tiempo medio de espera W [seg]:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="1">
+          <widget class="QLineEdit" name="line_espera_cola_Wq"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_pkt_enviados">
+           <property name="text">
+            <string>Paquetes enviados:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="line_pkt_drop">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Cantidad de paquetes que no entran a la cola por haber alcanzado el limite de la misma&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="line_tasa_perdida">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tasa de paquetes perdidos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_ocup_sistema">
+           <property name="text">
+            <string>Numero medio de bytes en el sistema L:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="line_ocup_sistema">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="line_inten_trafico">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Factor de utilización del sistema&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="label_pkt_drop">
+           <property name="text">
+            <string>Paquetes perdidos:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="label_ocup_cola_Lq">
+           <property name="text">
+            <string>Numero medio de bytes en la cola Lq:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="line_ocup_cola_Lq"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <widget class="QTextEdit" name="text_consola">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(19, 25, 38);
+selection-color: rgb(52, 247, 136);
+selection-background-color: rgb(255, 255, 255);
+alternate-background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Información detallada de paquetes servidos.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Estado actual: Esperando...&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_histograma">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Histogramas&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_imagen">
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>220</height>
+       </size>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(138, 146, 179);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::WinPanel</enum>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QFrame" name="frame">
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="comboBox_norm">
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::DefaultContextMenu</enum>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <item>
+            <property name="text">
+             <string>Si</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>No</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_graf_norm">
+           <property name="text">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Graficos Normalizados&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radio_tespera">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Tiempos de espera</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radio_tocup_sist">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Tiempos de ocupación del sistema</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radio_tinter_arribo">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Tiempos de Inter-Arribo a la Cola</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+   <zorder>text_consola</zorder>
+   <zorder>frame</zorder>
+   <zorder>label_histograma</zorder>
+   <zorder></zorder>
+   <zorder>label_imagen</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>723</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <widget class="QMenu" name="menuDocumentacion">
+     <property name="title">
+      <string>Documentacion</string>
+     </property>
+     <widget class="QMenu" name="menuLibrerias_utilizadas">
+      <property name="title">
+       <string>Librerias utilizadas</string>
+      </property>
+      <addaction name="actionSimpy"/>
+     </widget>
+     <addaction name="actionSobre_Python_2"/>
+     <addaction name="actionSobre_PyQt5_2"/>
+     <addaction name="actionSobre_SimuladorQ"/>
+     <addaction name="menuLibrerias_utilizadas"/>
+    </widget>
+    <widget class="QMenu" name="menuInformacion_adicional">
+     <property name="title">
+      <string>Informacion adicional</string>
+     </property>
+     <addaction name="actionTutorial_Python"/>
+     <addaction name="actionTutorial_PyQt"/>
+     <addaction name="actionGeneradores_y_corutinas_Python"/>
+    </widget>
+    <addaction name="menuDocumentacion"/>
+    <addaction name="menuInformacion_adicional"/>
+    <addaction name="separator"/>
+    <addaction name="actionAcerca_de_SimuladorQ"/>
+   </widget>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <widget class="QMenu" name="menuGuardar">
+     <property name="title">
+      <string>Guardar</string>
+     </property>
+     <addaction name="actionParametros_de_entrada"/>
+     <addaction name="actionParametros_de_salida"/>
+     <addaction name="actionInformacion_de_secuencia_de_paquetes"/>
+     <addaction name="actionTodo"/>
+    </widget>
+    <addaction name="actionRegresar"/>
+    <addaction name="separator"/>
+    <addaction name="actionReiniciar_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionImportar_datos"/>
+    <addaction name="menuGuardar"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuSimulacion">
+    <property name="title">
+     <string>Simulacion</string>
+    </property>
+    <addaction name="actionCorrer_simulacion"/>
+    <addaction name="actionResetear_parametros"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuSimulacion"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <action name="actionExportar_parametros_de_salida">
+   <property name="text">
+    <string>Parametros de salida</string>
+   </property>
+  </action>
+  <action name="actionExportar_informacion_de_secuencia_de_paquetes">
+   <property name="text">
+    <string>Informacion de secuencia de paquetes</string>
+   </property>
+  </action>
+  <action name="actionExportar_graficos_normalizados">
+   <property name="text">
+    <string>Graficos normalizados</string>
+   </property>
+  </action>
+  <action name="actionGraficos_no_normalizados">
+   <property name="text">
+    <string>Graficos no normalizados</string>
+   </property>
+  </action>
+  <action name="actionReiniciar">
+   <property name="text">
+    <string>Reiniciar</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionParametros_de_salida">
+   <property name="text">
+    <string>Parametros de salida</string>
+   </property>
+  </action>
+  <action name="actionInformacion_de_secuencia_de_paquetes">
+   <property name="text">
+    <string>Informacion de secuencia de paquetes</string>
+   </property>
+  </action>
+  <action name="actionNormalizados">
+   <property name="text">
+    <string>Normalizados</string>
+   </property>
+  </action>
+  <action name="actionSin_normalizar">
+   <property name="text">
+    <string>Sin normalizar</string>
+   </property>
+  </action>
+  <action name="actionTodo">
+   <property name="text">
+    <string>Todo</string>
+   </property>
+  </action>
+  <action name="actionSobre_PyQt5">
+   <property name="text">
+    <string>Sobre PyQt5</string>
+   </property>
+  </action>
+  <action name="actionSobre_Python">
+   <property name="text">
+    <string>Sobre Python</string>
+   </property>
+  </action>
+  <action name="actionSobre_PyQt5_2">
+   <property name="text">
+    <string>Sobre PyQt5</string>
+   </property>
+  </action>
+  <action name="actionSobre_Python_2">
+   <property name="text">
+    <string>Sobre Python</string>
+   </property>
+  </action>
+  <action name="actionSimpy">
+   <property name="text">
+    <string>Simpy</string>
+   </property>
+  </action>
+  <action name="actionNumpy">
+   <property name="text">
+    <string>Numpy</string>
+   </property>
+  </action>
+  <action name="actionRandom">
+   <property name="text">
+    <string>Random</string>
+   </property>
+  </action>
+  <action name="actionSimComponents">
+   <property name="text">
+    <string>SimComponents</string>
+   </property>
+  </action>
+  <action name="actionParametros_de_entrada">
+   <property name="text">
+    <string>Parametros de entrada</string>
+   </property>
+  </action>
+  <action name="actionImportar_datos">
+   <property name="text">
+    <string>Importar datos</string>
+   </property>
+  </action>
+  <action name="actionCodigo_fuente">
+   <property name="text">
+    <string>Codigo fuente</string>
+   </property>
+  </action>
+  <action name="actionCorrer_simulacion">
+   <property name="text">
+    <string>Correr simulacion</string>
+   </property>
+  </action>
+  <action name="actionInterrumpir_simulacion_actual">
+   <property name="text">
+    <string>Interrumpir simulacion actual</string>
+   </property>
+  </action>
+  <action name="actionResetear_parametros">
+   <property name="text">
+    <string>Resetear parametros</string>
+   </property>
+  </action>
+  <action name="actionReiniciar_2">
+   <property name="text">
+    <string>Reiniciar</string>
+   </property>
+  </action>
+  <action name="actionRegresar">
+   <property name="text">
+    <string>Regresar a pantalla principal</string>
+   </property>
+  </action>
+  <action name="actionSimuladorQ">
+   <property name="text">
+    <string>SimuladorQ</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de_SimuladorQ">
+   <property name="text">
+    <string>Acerca de SimuladorQ</string>
+   </property>
+  </action>
+  <action name="actionSobre_SimuladorQ">
+   <property name="text">
+    <string>Sobre SimuladorQ</string>
+   </property>
+  </action>
+  <action name="actionTutorial_Python">
+   <property name="text">
+    <string>Tutorial Python</string>
+   </property>
+  </action>
+  <action name="actionTutorial_PyQt">
+   <property name="text">
+    <string>Tutorial PyQt</string>
+   </property>
+  </action>
+  <action name="actionGeneradores_y_corutinas_Python">
+   <property name="text">
+    <string>Generadores y corutinas [Python]</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>line_lambda</tabstop>
+  <tabstop>line_mu</tabstop>
+  <tabstop>line_user</tabstop>
+  <tabstop>line_portrate</tabstop>
+  <tabstop>line_tsim</tabstop>
+  <tabstop>comboBox_bins</tabstop>
+  <tabstop>push_simular</tabstop>
+  <tabstop>push_reset</tabstop>
+  <tabstop>line_pkt_enviados</tabstop>
+  <tabstop>line_pkt_recibidos</tabstop>
+  <tabstop>line_pkt_drop</tabstop>
+  <tabstop>line_tasa_perdida</tabstop>
+  <tabstop>line_inten_trafico</tabstop>
+  <tabstop>line_ocup_sistema</tabstop>
+  <tabstop>line_ocup_cola_Lq</tabstop>
+  <tabstop>line_twait_medio</tabstop>
+  <tabstop>line_espera_cola_Wq</tabstop>
+  <tabstop>text_consola</tabstop>
+  <tabstop>comboBox_norm</tabstop>
+  <tabstop>radio_tespera</tabstop>
+  <tabstop>radio_tocup_sist</tabstop>
+  <tabstop>radio_tinter_arribo</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>push_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>line_tsim</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>line_portrate</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>220</x>
+     <y>300</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>335</x>
+     <y>171</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>line_user</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>318</x>
+     <y>142</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>line_mu</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>226</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>push_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>line_lambda</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>240</x>
+     <y>292</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>84</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
