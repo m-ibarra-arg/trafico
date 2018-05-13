@@ -62,7 +62,7 @@ provoca que éste no se desborde. También se observa que si $K → ∞$ y $ρ <
 
 ### Medidas de Eficiencia
 Número medio de clientes en el sistema 
-$$ L= \frac {\rho [1 - (K+1)\rho^K  + K \rho^{K+1} ]}{(1-\rho^{K+1})(1- \rho)}$$
+$$ L=\rho \frac {\left [1 - (K+1)\rho^K  + K \rho^{K+1} \right ]} {(1-\rho^{K+1})(1- \rho)}$$
 
 cuando $\rho = 1$
 
@@ -120,5 +120,5 @@ Obsérvese que las medidas de eficiencia incrementan su valor conforme $σ^2$ au
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NjI2ODg1OF19
+eyJoaXN0b3J5IjpbLTIwMzk4NDg2OTEsMjE0NjI2ODg1OF19
 -->
