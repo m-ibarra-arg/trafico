@@ -1,9 +1,9 @@
 # Descarga
 
-
+SimuladorQ esta alojado en Github.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MjQyNjIxNiwtODUwMzY2ODY4XX0=
+eyJoaXN0b3J5IjpbLTE4MTQxOTY1ODQsLTg1MDM2Njg2OF19
 -->
