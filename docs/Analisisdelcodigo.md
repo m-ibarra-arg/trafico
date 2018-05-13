@@ -168,7 +168,7 @@ Entonces se puede pensar que el tiempo de servicio, tendrá la misma distribuci�
 
 Como ejemplo, para ver mejor lo que estamos diciendo, pondremos el modelo M/M/1. Tenemos como tasa de servicio en este modelo, valores distribuidos exponencialmente. Entonces la media de una distribución exponencial es $1/\lambda$. No confundir este lambda con la tasa de inter arribo.  
 
-$$ \mu = ({\frac {\frac{1}{\lambda} *8}{rate}})^{-1} = \frac{byte}{seg}$$
+$$\mu = \left ( {\frac {\frac{1}{\lambda} \times 8}{rate}} \right )^{-1} = \frac{byte}{seg}$$
 
 Donde la media esta dada en byte, el 8 es en bit, y el rate en bps.
 
@@ -311,7 +311,7 @@ La manera en que se calcula puede traer algún error si hay algún paquete que n
 ```python    	
 	tasa_perdida=1.0 - float(pg.packets_sent)/switch_port.packets_rec
 ```
-Como se dijo anteriormente, la manera de calcular la tasa de servicio, es a partir del parámetro de la distribución exponencial a la hora de generar los paquetes en el PacketGenerator.  Es por esto que, sabiendo que la intensidad de tráfico es $\lambda / \mu$ obtenemos a $\mu$ como  $$ \mu = ({\frac {\frac{1}{\lambda_{paq}} *8}{rate}})^{-1}$$ siendo el  $\lambda_{paq}$ el parmetro anteriormente mencionado.
+Como se dijo anteriormente, la manera de calcular la tasa de servicio, es a partir del parámetro de la distribución exponencial a la hora de generar los paquetes en el PacketGenerator.  Es por esto que, sabiendo que la intensidad de tráfico es $\lambda / \mu$ obtenemos a $\mu$ como  $$\mu = \left ( {\frac {\frac{1}{\lambda_{paq}} \times8}{rate}} \right )^{-1}$$ siendo el  $\lambda_{paq}$ el parámetro anteriormente mencionado.
 Entonces se calcula la intensidad de tráfico $\rho$ de esa manera. 
 ```python    
     intensidad_trafico = (lamda)*((float(sum(switch_port.sizes)/len(switch_port.sizes))*8.0/port_rate))
@@ -352,7 +352,7 @@ Primero, vemos que ahora también se pasa como parámetro la distribución gener
 En esta función, ahora no existe más el parámetro $\mu$. Se pasa los valores de **a** y **b**. En la distribución Normal, representan la media y la desviación estándar respectivamente. En la Uniforme, los valores mínimo y máximo del rango que define la función de densidad de probabilidad.
 
 Ahora entonces, la tasa de servicio de la cola estará dada por
-$$ \mu = ({\frac {{Media} *8}{rate}})^{-1}$$
+$$ \mu = \left ( {\frac {{Media} *8}{rate}} \right )^{-1}$$
 
 donde la media de la Normal está definida en el argumento, y la de la distribución uniforme es $\frac{a+b}{2}$.
 
@@ -430,5 +430,6 @@ axis.set_ylabel("Frecuencia de ocurrencia")
 fig.savefig(directorio + "QueueHistogram_normal.png")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MTI4Njk1NCwtODgxOTYwMjhdfQ==
+eyJoaXN0b3J5IjpbMTUyNTgxNDg0NCwtMjgxMjg2OTU0LC04OD
+E5NjAyOF19
 -->
