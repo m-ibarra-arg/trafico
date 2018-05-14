@@ -25,11 +25,11 @@ Los tiempos de inter-arribo tienen una distribución exponencial, con parámetro
 
 El resultado de la simulación. Tiempos de Inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob//img/prueba_01/ArrivalHistogram_normal.png?raw=true )
 
 En cuanto a los tiempos de servicio de la cola:
 
-![Tiempo servicio Matlab](https://github.com/maxxxis182/trafico/blob/master/docs/img/matlab/prueba_01_espera.png?raw=true )
+![Tiempo servicio Matlab](https://github.com/maxxxis182/trafico/master/docs/img/matlab/prueba_01_espera.png?raw=true )
 
 ![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/WaitHistogram_normal.png?raw=true )
 
@@ -50,11 +50,11 @@ Aumentando el tiempo de simulación, con respecto a la **Prueba 01**, vemos que 
 
 Tiempos de inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_02/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob//img/prueba_02/ArrivalHistogram_normal.png?raw=true )
 
 Tiempos de servicio:
 
-![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_02/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico//img/prueba_02/WaitHistogram_normal.png?raw=true )
 
 
 ### Prueba 03
@@ -88,9 +88,9 @@ Aumentando el tiempo de simulación:
 La convergencia a los valores teóricos se vuelve mas notable.
 Ocurre en la simulación de este modelo, que por tiempos de simulación, paquetes generados en el PacketGenerator no alcanzan a llegar al PacketSink. Lo vemos en los parámetros de salida.
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_04/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/master/docs/img/prueba_04/ArrivalHistogram_normal.png?raw=true )
 
-![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_04/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob//img/prueba_04/WaitHistogram_normal.png?raw=true )
 
 Ocurre lo mismo que en la **Prueba 01** con respecto a la amplitud del gráfico.
 
@@ -119,7 +119,7 @@ Gráficamente, los tiempos que deben esperar los paquetes.
 
 En este modelo, la tasa de servicio no está definida explicitamente.
 Recordando la relación con la que trabaja el SwitchPort para servir los paquetes, tenemos el valor de la tasa de servicio:
-$$ \mu = ({\frac {{Media} *8}{rate}})^{-1}$$
+$$ \mu = ({\frac {{Media} \times 8}{rate}})^{-1}$$
 
 
 
@@ -135,9 +135,9 @@ $$ \mu = ({\frac {{Media} *8}{rate}})^{-1}$$
 
 Para verificar $\mu$ del simulador, basta dividir la intensidad de trafico con la tasa de inter-arribo.
 
-![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_06/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/blob/master/docs/img/prueba_06/WaitHistogram_normal.png?raw=true )
 
-![Tiempo inter-arribo Matlab](https://github.com/maxxxis182/trafico/blob/master/docs/img/matlab/prueba_06_espera.png?raw=true)
+![Tiempo inter-arribo Matlab](https://github.com/maxxxis182/trafico/master/docs/img/matlab/prueba_06_espera.png?raw=true)
 
 La distribución de los tiempos de inter-arribo es exponencial, como habíamos visto en los ejemplos M/M/1. 
 Lo que deberíamos ver es un cambio en la distribución de los tiempos de servicio. La distribución en este caso es *Normal*, como se observa en el gráfico con media $1/\mu$ y varianza $\sigma^2$. El simulador entrega los paquetes con esta media, aunque en este caso no se llega a distinguir la forma característica de la función de densidad.
@@ -183,8 +183,8 @@ $$var = \frac{(b-a)^2}{12}$$
 
 A partir de los valores de **a** y  **b** que introducimos en el simulador, se corresponden con los límites de la distribución de los tiempos de servicio de la siguiente manera:
 
-$$ min = ({\frac {{a} *8}{rate}})$$
-$$ max = ({\frac {{b} *8}{rate}})$$
+$$ min = ({\frac {{a} \times8}{rate}})$$
+$$ max = ({\frac {{b} \times8}{rate}})$$
 
 ![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_08/WaitHistogram_normal.png?raw=true )
 
@@ -260,6 +260,7 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NjM2OTg0MCwxNTI5NTMzNjE4LC0xNj
-c2NjQ2MjE4LC05MTI2NjEwNTYsLTEwNjA3NzkzMDVdfQ==
+eyJoaXN0b3J5IjpbLTEyNTIyMTk0NjAsMTY5NjM2OTg0MCwxNT
+I5NTMzNjE4LC0xNjc2NjQ2MjE4LC05MTI2NjEwNTYsLTEwNjA3
+NzkzMDVdfQ==
 -->
