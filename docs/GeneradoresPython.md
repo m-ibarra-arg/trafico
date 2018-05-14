@@ -40,9 +40,9 @@ La orden **yield** lo que hará es esperar un tiempo dado por *adist()* (numeró
 
 En definitiva,  genera  datos en tiempo de ejecución. En nuestro caso paquetes. 
 
-En bibliografía hay enlace
+En la bibliografía hay enlaces para profundizar en el tema.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMjA4MTA2MiwtMTEwNTg1NTIyNSwtMT
-Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
-MTA5LC0zMTI4OTM5N119
+eyJoaXN0b3J5IjpbLTExNTg2NTgwMDksLTExMDU4NTUyMjUsLT
+E2OTcxMTI1MDYsLTEzNzQ4MjAzLDE4Nzc4Njk4OTcsMTM5NTIw
+MjEwOSwtMzEyODkzOTddfQ==
 -->
