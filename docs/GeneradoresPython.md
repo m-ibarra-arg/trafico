@@ -35,10 +35,11 @@ while self.env.now < self.finish:
 	p = Packet(self.env.now, self.sdist(),self.packets_sent, src=self.id, flow_id=self.flow_id) 
 	self.out.put(p)
 ```
+Mientras el 
 
 En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NzUzNjE4LC0xMTA1ODU1MjI1LC0xNj
-k3MTEyNTA2LC0xMzc0ODIwMywxODc3ODY5ODk3LDEzOTUyMDIx
-MDksLTMxMjg5Mzk3XX0=
+eyJoaXN0b3J5IjpbMTk3Njg3OTk1MCwtMTEwNTg1NTIyNSwtMT
+Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
+MTA5LC0zMTI4OTM5N119
 -->
