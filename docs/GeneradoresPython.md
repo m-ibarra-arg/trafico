@@ -38,9 +38,9 @@ while self.env.now < self.finish:
 Lo que dice la función. Mientras el tiempo actual de ejecución sea menor que el tiempo total definido de la simulación, correrá el bucle del generador.
 La orden **yield** lo que hará es esperar un tiempo dado por *adist()* (numeró aleatorio que veremos más adelante) y luego ejecutará las instrucciones que le siguen. Cuando termina, espera nuevamente un valor de *adist()*
 
-En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
+En definitiva,  genera  datos en tiempo de ejecución. En nuestro caso paquetes. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxMjUxMjM3NSwtMTEwNTg1NTIyNSwtMT
+eyJoaXN0b3J5IjpbMTE5NzIyNjIwMCwtMTEwNTg1NTIyNSwtMT
 Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
 MTA5LC0zMTI4OTM5N119
 -->
