@@ -1,6 +1,6 @@
 # Generadores con Python
 
-Este apartado es una introducción al
+Este apartado es una introducción al 
 
 ## ¿Qué son los generadores?
 
@@ -10,6 +10,6 @@ Son funciones que nos permitirán obtener sus resultados poco a poco. Es decir, 
 
 Pues, como el propio nombre indica, para  **generar**  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. Por este motivo, utilizar  _range_  es más lento que usar  _xrange_.  _range_  genera todos los valores del rango y los devuelve en un array. En cambio,  _xrange_  genera cada valor del rango cuando se le solicita.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMzc5NDk4MiwxODc3ODY5ODk3LDEzOT
-UyMDIxMDksLTMxMjg5Mzk3XX0=
+eyJoaXN0b3J5IjpbLTEwNjUyOTA2MzgsMTg3Nzg2OTg5NywxMz
+k1MjAyMTA5LC0zMTI4OTM5N119
 -->
