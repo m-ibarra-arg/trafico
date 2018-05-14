@@ -26,19 +26,21 @@ print i
 ```
 La orden **yield** la veremos sobre todo en las librerías de SimComponents, para generar los paquetes y para que sean servidos en la cola.
 
-Ejemplo:
+Ejemplo. función PacketGenerator:
+
 ```python
 def run(self):  
 	yield self.env.timeout(self.initial_delay)
 	while self.env.now < self.finish:
 		yield self.env.timeout(self.adist())
 		self.packets_sent += 1 
-		p = Packet(self.env.now, self.sdist(),self.packets_sent, src=self.id, 		flow_id=self.flow_id) 
+		p = Packet(self.env.now, self.sdist(),self.packets_sent, src=self.id, flow_id=self.flow_id) 
 		self.out.put(p)
 ```
+
 En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI4MDc5ODg4LC0xMTA1ODU1MjI1LC0xNj
-k3MTEyNTA2LC0xMzc0ODIwMywxODc3ODY5ODk3LDEzOTUyMDIx
-MDksLTMxMjg5Mzk3XX0=
+eyJoaXN0b3J5IjpbLTE1OTkyNDcwNTEsLTExMDU4NTUyMjUsLT
+E2OTcxMTI1MDYsLTEzNzQ4MjAzLDE4Nzc4Njk4OTcsMTM5NTIw
+MjEwOSwtMzEyODkzOTddfQ==
 -->
