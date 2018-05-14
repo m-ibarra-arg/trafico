@@ -25,11 +25,11 @@ Los tiempos de inter-arribo tienen una distribución exponencial, con parámetro
 
 El resultado de la simulación. Tiempos de Inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob/img/prueba_01/ArrivalHistogram_normal.png )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/ArrivalHistogram_normal.png )
 
 En cuanto a los tiempos de servicio de la cola:
 
-![Tiempo servicio Matlab](https://github.com/maxxxis182/trafico/master/docs/img/matlab/prueba_01_espera.png?raw=true )
+![Tiempo servicio Matlab](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/matlab/prueba_01_espera.png?raw=true )
 
 ![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/WaitHistogram_normal.png?raw=true )
 
@@ -50,11 +50,11 @@ Aumentando el tiempo de simulación, con respecto a la **Prueba 01**, vemos que 
 
 Tiempos de inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob//img/prueba_02/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_02/ArrivalHistogram_normal.png?raw=true )
 
 Tiempos de servicio:
 
-![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico//img/prueba_02/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_02/WaitHistogram_normal.png?raw=true )
 
 
 ### Prueba 03
@@ -88,9 +88,9 @@ Aumentando el tiempo de simulación:
 La convergencia a los valores teóricos se vuelve mas notable.
 Ocurre en la simulación de este modelo, que por tiempos de simulación, paquetes generados en el PacketGenerator no alcanzan a llegar al PacketSink. Lo vemos en los parámetros de salida.
 
-![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/master/docs/img/prueba_04/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_04/ArrivalHistogram_normal.png?raw=true )
 
-![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob//img/prueba_04/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_04/WaitHistogram_normal.png?raw=true )
 
 Ocurre lo mismo que en la **Prueba 01** con respecto a la amplitud del gráfico.
 
@@ -260,7 +260,7 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzkzNDUyMTcsLTEyNTIyMTk0NjAsMT
+eyJoaXN0b3J5IjpbLTEyNjUyMzAwMDIsLTEyNTIyMTk0NjAsMT
 Y5NjM2OTg0MCwxNTI5NTMzNjE4LC0xNjc2NjQ2MjE4LC05MTI2
 NjEwNTYsLTEwNjA3NzkzMDVdfQ==
 -->
