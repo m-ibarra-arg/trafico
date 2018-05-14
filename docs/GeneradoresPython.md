@@ -17,10 +17,17 @@ def countdown(n):
     print "Done counting down"
 ```
 
+```python
+for i in countdown(5): 
+print i
+
+> 5 4 3 2 1 
+```
 La orden **yield** la veremos sobre todo en las librerías de SimComponents, para generar los paquetes y para que sean servidos en la cola.
 
 En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTcxMTI1MDYsLTEzNzQ4MjAzLDE4Nz
-c4Njk4OTcsMTM5NTIwMjEwOSwtMzEyODkzOTddfQ==
+eyJoaXN0b3J5IjpbMzQyNjU5NTIxLC0xNjk3MTEyNTA2LC0xMz
+c0ODIwMywxODc3ODY5ODk3LDEzOTUyMDIxMDksLTMxMjg5Mzk3
+XX0=
 -->
