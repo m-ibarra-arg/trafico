@@ -44,6 +44,7 @@ class MyApp_mm1(QtWidgets.QMainWindow, Ui_entrada_salida_mm1)
 class MyApp_mg1(QtWidgets.QMainWindow, Ui_entrada_salida_mg1)
 [...]
 class MyApp_mm1k(QtWidgets.QMainWindow, Ui_entrada_salida_mm1k)
+[...]
 ```
 Para la inicialización, presentación, visualización y funcionalidad, cada clase tiene una estructura similar para la función `__init__`:
 ```python    
@@ -53,9 +54,11 @@ def __init__(self):
             Ui_MainWindow.__init__(self) 
             self.setupUi(self) 
             self.move(475,200)
+            
             directorio = os.getcwd() + '/'
-            pixmap = QPixmap(directorio  + "logo simulatorQ_titulo.png")
+            pixmap = QPixmap(directorio  + "Im/logo simulatorQ_titulo.png")
             self.label_titulo.setPixmap(pixmap) 
+            
             self.texto_descripcion.setOpenExternalLinks(True)
             
     #---------------------------FUNCIONALIDAD BOTONES ----------------------------
@@ -94,7 +97,7 @@ Por último, vemos que todo esta basado en la estructura try/except. Esto es por
 ### Funciones de la clase `MyApp`
 Describimos algunas de las funciones de MyApp, clase que representa la ventana principal.
 
-#### `openWindow_MODELO()`
+#### *openWindow_MODELO()*
 ```python    
 	def openWindow_mm1(self):
         self.anotherwindow = MyApp_mm1()
@@ -103,7 +106,7 @@ Describimos algunas de las funciones de MyApp, clase que representa la ventana p
 ```
 Abre la ventana donde se ingresarán los parámetros de simulación y se visualizarán los resultados, para el modelo M/M/1. Por comodidad se usa el método `showMaximized()` para ventana maximizada. Y se oculta la ventana principal para mostrar la nueva con `hide()`. Similar para las demás ventanas de modelos.
 
-#### `closeEvent()`
+#### *closeEvent()*
 ```python    
      def closeEvent(self, event):
         reply = QtWidgets.QMessageBox.question(self, 'Cerrar',"¿Está seguro que desea salir?", QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
@@ -114,7 +117,7 @@ Abre la ventana donde se ingresarán los parámetros de simulación y se visuali
 ```
 Esta función existe para capturar el evento que se dispara al intentar cerrar el programa. Al detectarlo, con `QMessageBox.cuestion` se crea el mensaje pop-up preguntando si se desea cerrar o no. De acuerdo a la respuesta, *Yes* o *No*, el evento se acepta, o se descarta, y se sigue utilizando el simulador.
 
-#### `open_modelos()`
+#### *open_modelos()*
 ```python    
 	def open_modelos(self):
         if self.radio_mm1.isChecked() == False and self.radio_mg1.isChecked() == False and self.radio_mm1k.isChecked() == False:
@@ -160,10 +163,11 @@ Los `comboBox` crean las señales cuando cambian de estado, y se puede identific
 
 La instrucción `self.radio_HISTOGRAMA.clicked.connect(self.graficos)` llama a la función gráficos de acuerdo al gráfico que quiera el usuario, y siempre se llama cuando se hace click en un botón de histograma distinto.
 
-#### `reinicio()` , `limpiar()` y `resetear()`
+#### *reinicio() , limpiar()* y *resetear()*
 ```python    
     def reinicio(self):
         self.resetear()
+        
         self.line_twait_medio.setText("")
         self.line_espera_cola_Wq.setText("")
         self.line_inten_trafico.setText("")
@@ -176,12 +180,13 @@ La instrucción `self.radio_HISTOGRAMA.clicked.connect(self.graficos)` llama a l
         self.text_consola.setTextColor(QtGui.QColor("white"))
         self.text_consola.setFont(QtGui.QFont(u'Ubuntu', 11))
         self.text_consola.setText("Información detallada de paquetes servidos.\nEstado actual: Esperando...")
+        
         self.label_imagen.setStyleSheet("background-color: rgb(138, 146, 179);")
         directorio = os.getcwd() + '/'
-        pixmap = QPixmap(directorio  + "logo_simulatorQ-reemplazo.png")
+        pixmap = QPixmap(directorio  + "Im/logo_simulatorQ-reemplazo.png")
         self.label_imagen.setPixmap(pixmap)
 ```
-Con esta funcion se limpian los parametros de entrada, llamando a `resetear()`, los parametros de salida (seteando caracter vacio en todas las lineas), borra el detalle de los paquetes servidos mostrando el mensaje original y deshace los histogramas, mostrando nuevamente el logo del programa.
+Con esta función se limpian los parámetros de entrada, llamando a `resetear()`, los parámetros de salida (seteando caracter vacío en todas las lineas), borra el detalle de los paquetes servidos mostrando el mensaje original y deshace los histogramas, mostrando nuevamente el logo del programa.
 
 ```python    
 	def limpiar(self):
@@ -197,7 +202,7 @@ Solo limpia los parámetros de entrada llamando a `resetear()`
         self.line_user.setText("")
         self.line_tsim.setText("")
 ```
-##### `salir_programa()`
+#### *salir_programa()*
 ```python    
     def salir_programa(self):
         reply = QtWidgets.QMessageBox.question(self, 'Cerrar',"¿Está seguro que desea salir?", QtWidgets.QMessageBox.Yes, QtWidgets.QMessageBox.No)
@@ -209,7 +214,8 @@ Solo limpia los parámetros de entrada llamando a `resetear()`
 ```
 Se ejecuta cuando se pide salir utilizando la acción del menú `Archivo -> Salir`. Como en todos los casos, pide autorización para cerrar, y si es afirmativo, se borra la carpeta temporal donde se generan los histogramas, chequeando previamente si se creo alguno o no.
 
-#### `guardar_entrada()`
+#### *guardar_entrada()*
+
 ```python    
     def guardar_entrada(self):
         try:
@@ -249,7 +255,7 @@ La única forma de verificar si es un archivo genuino de SimuladorQ y que sea el
 
 Hay mas funciones para guardar aspectos de la simulación que trabajan de una forma similar.
 
-#### `importar()`
+#### *importar()*
 ```python    
     def importar(self):
         path_archivo, directorio = openFileNameDialog()
@@ -284,7 +290,7 @@ Hay mas funciones para guardar aspectos de la simulación que trabajan de una fo
 ```
 Esta función copia las lineas del archivo que se genera al utilizar la función `guardar_entrada()` y las pega en los campos de ingreso de datos de la ventana. Como dijimos antes, la única validación que tiene, ademas de verificar los permisos, para poder ejecutarse, es leer la primer linea del fichero. Si es el modelo que corresponde, sigue la ejecución. SimuladorQ no repara en los casos que exista un archivo, en la que su primer linea sea MM1, MG1 o MM1K, y que después el resto sean datos ilegibles. No hay una comprobación de ese estilo. La única alternativa es que se se muestre un mensaje de error al momento de simular con datos incorrectos.
 
-#### `simular()`
+#### *simular()*
 ```python    
     def simular (self):
         if self.line_lambda.text() == "" or self.line_mu.text() == "" or self.line_user.text() == "" or self.line_portrate.text() == "" or self.line_tsim.text() == "" or self.comboBox_bins.currentText() == "Seleccione":
@@ -337,13 +343,13 @@ Los parámetros de salida se llenan con los demás argumentos de salida de la fu
 ```     
 Se graba una imagen predeterminada de histograma, que luego puede cambiar de acuerdo a la preferencia del usuario. `QPixmap` es el submodelo que permite crear generar imágenes dentro de un elemento `Qlabel`.
 
-#### gráficos()
+#### *graficos()*
 
 ```python    
     def graficos(self):
         directorio=os.getcwd() + '/'
 ```     
-Esta función se ejecuta siempre que se quiere cambiar de gráfico para visualizarlo, ya sea en forma normalizada o no. Primero se guarda en la variable `directorio` el directorio actual donde se esta ejecutando el programa. Esto se hace invocando el modulo estándar *os* con su método *getcwd* `os.getcwd()`). Como es un string, y para que sea un directorio, se le agrega una barra "/" para finalizar. 
+Esta función se ejecuta siempre que se quiere cambiar de gráfico para visualizarlo, ya sea en forma normalizada o no. Primero se guarda en la variable `directorio` el directorio actual donde se esta ejecutando el programa. Esto se hace invocando el modulo estándar *os* con su método *getcwd* (`os.getcwd()`). Como es un string, y para que sea un directorio, se le agrega una barra "/" para finalizar. 
 
 ```python    
         if self.comboBox_norm.currentText() == "Si":
@@ -383,7 +389,7 @@ Se verifica si el texto actual del *comboBox_norm* dice "Si". En caso afirmativo
 
 Se crea este modulo para extraer todas aquellas funciones que no necesitaban una vinculación directa con los objetos de Qt. Podemos separarlas en 2 grupos, por un lado las funciones para manejo de archivos y carpetas, y por el otro aquellas que nos llevan a las paginas web de interés y de documentación.
 
-### setFolderDialog()
+### *setFolderDialog()*
 
 ```python    
 def setFolderDialog():
@@ -411,7 +417,7 @@ Siempre y cuando el usuario elija el directorio, por una cuestión de manejo de 
 
 Luego pueden existir errores de permisos o de funcionamiento que tiene su correspondiente mensaje de error. 
 
-### openFileNameDialog()
+### *openFileNameDialog()*
 ```python    
 def openFileNameDialog():
     try:
@@ -441,7 +447,7 @@ Utiliza los módulos y submódulos de la función `setFolderDialog()`, pero adem
 
 Ademas del nombre del archivo, la función devuelve el directorio de ese archivo.
 
-### saveFileDialog()
+### *saveFileDialog()*
 
 ```python    
 def saveFileDialog():
@@ -479,7 +485,7 @@ Similar a los anteriores, esta función es usada para guardar los parámetros de
 
 El usuario debe brindar un nombre para el archivo a guardar. Si no lo hace, incurre en un error y se devuelve variables con string vacíos. En el caso en que se provea un nombre, pero sin una extensión, el programa le da una extensión *.siq*, propia de SimuladorQ, pero puede escoger entre elegir entre esa, o *.txt*.
 
-### doc_python_web() y similares
+### *doc_python_web()* y similares
 ```python    
 def doc_python_web():
     webbrowser.open("https://www.python.org/doc/", new=2, autoraise=True)
@@ -488,5 +494,5 @@ Funciones con el objetivo de llevar al usuario a las paginas web de documentacio
 
 Para eso se importa el modulo `webbrowser`, que permite abrir una `url` , en una nueva pestaña del navegador web por defecto, y que ademas, se abra y/o se levante automáticamente.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMjE3MjczMF19
+eyJoaXN0b3J5IjpbLTE2NzMwODUyMTUsLTMwMjE3MjczMF19
 -->
