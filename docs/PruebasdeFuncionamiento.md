@@ -25,7 +25,7 @@ Los tiempos de inter-arribo tienen una distribución exponencial, con parámetro
 
 El resultado de la simulación. Tiempos de Inter-arribo a la cola:
 
-![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob//img/prueba_01/ArrivalHistogram_normal.png?raw=true )
+![Tiempo inter-arribo Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docsblob/img/prueba_01/ArrivalHistogram_normal.png )
 
 En cuanto a los tiempos de servicio de la cola:
 
@@ -260,7 +260,7 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTIyMTk0NjAsMTY5NjM2OTg0MCwxNT
-I5NTMzNjE4LC0xNjc2NjQ2MjE4LC05MTI2NjEwNTYsLTEwNjA3
-NzkzMDVdfQ==
+eyJoaXN0b3J5IjpbLTEwNzkzNDUyMTcsLTEyNTIyMTk0NjAsMT
+Y5NjM2OTg0MCwxNTI5NTMzNjE4LC0xNjc2NjQ2MjE4LC05MTI2
+NjEwNTYsLTEwNjA3NzkzMDVdfQ==
 -->
