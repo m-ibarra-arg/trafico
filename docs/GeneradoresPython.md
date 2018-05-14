@@ -36,11 +36,11 @@ while self.env.now < self.finish:
 	self.out.put(p)
 ```
 Lo que dice la función. Mientras el tiempo actual de ejecución sea menor que el tiempo total definido de la simulación, correrá el bucle del generador.
-La orden **yield** lo que hará es esperar un tiempo dado por *adist()* (numeró aleatorio que veremos más adelante) y luego ejecutará 
+La orden **yield** lo que hará es esperar un tiempo dado por *adist()* (numeró aleatorio que veremos más adelante) y luego ejecutará las instrucciones que le siguen. Cuando termina, espera nuevamente un valor de *adist()*
 
 En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NTM3MDU2NSwtMTEwNTg1NTIyNSwtMT
+eyJoaXN0b3J5IjpbLTYxMjUxMjM3NSwtMTEwNTg1NTIyNSwtMT
 Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
 MTA5LC0zMTI4OTM5N119
 -->
