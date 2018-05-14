@@ -33,7 +33,7 @@ En cuanto a los tiempos de servicio de la cola:
 
 ![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_01/WaitHistogram_normal.png?raw=true )
 
-Se puede ver que en la teoría, la función de distribución tiene amplitud igual a dos, y en el simulador es uno. Esto se debe al tamaño de los paquetes, consecuente con el valor de $\mu$. Al ser muy pronunciada la curva de la distribución con parámetros grandes (ej: $\lambda=2$ ), no se llega  a notar esta diferencia. Pruebe con valores de $\lambda$ mas pequeños, que hacen que la curva decrezca suavemente, y se ve la convergencia de ambas gráficas.  
+Se puede ver que en la teoría, la función de distribución tiene amplitud igual a dos, y en el simulador es uno. Esto se debe al tamaño de los paquetes, consecuente con el valor de $\mu$. Al ser muy pronunciada la curva de la distribución con parámetros grandes (ej: $\lambda=2$ ), no se llega  a notar esta diferencia. Pruebe con valores de $\lambda$ mas pequeños, que hacen que la curva decrezca suavemente, y se ve la convergencia de ambas gráficas.  O también con una relación de 1:10 entre $\lambda$ y $\mu$. 
 
 ### Prueba 02
 
@@ -135,9 +135,9 @@ $$ \mu = ({\frac {{Media} \times 8}{rate}})^{-1}$$
 
 Para verificar $\mu$ del simulador, basta dividir la intensidad de trafico con la tasa de inter-arribo.
 
-![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/blob/master/docs/img/prueba_06/WaitHistogram_normal.png?raw=true )
+![Tiempo de Servicio de la cola Simulador](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/prueba_06/WaitHistogram_normal.png?raw=true )
 
-![Tiempo inter-arribo Matlab](https://github.com/maxxxis182/trafico/master/docs/img/matlab/prueba_06_espera.png?raw=true)
+![Tiempo inter-arribo Matlab](https://raw.githubusercontent.com/maxxxis182/trafico/master/docs/img/matlab/prueba_06_espera.png?raw=true)
 
 La distribución de los tiempos de inter-arribo es exponencial, como habíamos visto en los ejemplos M/M/1. 
 Lo que deberíamos ver es un cambio en la distribución de los tiempos de servicio. La distribución en este caso es *Normal*, como se observa en el gráfico con media $1/\mu$ y varianza $\sigma^2$. El simulador entrega los paquetes con esta media, aunque en este caso no se llega a distinguir la forma característica de la función de densidad.
@@ -260,7 +260,7 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjUyMzAwMDIsLTEyNTIyMTk0NjAsMT
-Y5NjM2OTg0MCwxNTI5NTMzNjE4LC0xNjc2NjQ2MjE4LC05MTI2
-NjEwNTYsLTEwNjA3NzkzMDVdfQ==
+eyJoaXN0b3J5IjpbLTMyODY0MDEwNSwtMTI1MjIxOTQ2MCwxNj
+k2MzY5ODQwLDE1Mjk1MzM2MTgsLTE2NzY2NDYyMTgsLTkxMjY2
+MTA1NiwtMTA2MDc3OTMwNV19
 -->
