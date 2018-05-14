@@ -39,8 +39,10 @@ Lo que dice la función. Mientras el tiempo actual de ejecución sea menor que e
 La orden **yield** lo que hará es esperar un tiempo dado por *adist()* (numeró aleatorio que veremos más adelante) y luego ejecutará las instrucciones que le siguen. Cuando termina, espera nuevamente un valor de *adist()*
 
 En definitiva,  genera  datos en tiempo de ejecución. En nuestro caso paquetes. 
+
+En bibliografía hay enlace
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NzIyNjIwMCwtMTEwNTg1NTIyNSwtMT
+eyJoaXN0b3J5IjpbMTExMjA4MTA2MiwtMTEwNTg1NTIyNSwtMT
 Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
 MTA5LC0zMTI4OTM5N119
 -->
