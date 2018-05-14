@@ -35,11 +35,12 @@ while self.env.now < self.finish:
 	p = Packet(self.env.now, self.sdist(),self.packets_sent, src=self.id, flow_id=self.flow_id) 
 	self.out.put(p)
 ```
-Lo que dice la función. Mientras el tiempo actual de ejecución sea menor que el tiempo total definido de la simulación, 
+Lo que dice la función. Mientras el tiempo actual de ejecución sea menor que el tiempo total definido de la simulación, correrá el bucle del generador.
+La orden **yield** lo que hará es esperar un tiempo dado por *adist()* 
 
 En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1MTI5NzUwMCwtMTEwNTg1NTIyNSwtMT
-Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
-MTA5LC0zMTI4OTM5N119
+eyJoaXN0b3J5IjpbLTIwNzY5NjMzNDgsLTExMDU4NTUyMjUsLT
+E2OTcxMTI1MDYsLTEzNzQ4MjAzLDE4Nzc4Njk4OTcsMTM5NTIw
+MjEwOSwtMzEyODkzOTddfQ==
 -->
