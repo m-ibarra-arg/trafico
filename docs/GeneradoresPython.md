@@ -26,11 +26,11 @@ print i
 ```
 La orden **yield** la veremos sobre todo en las librerías de SimComponents, para generar los paquetes y para que sean servidos en la cola.
 
-
+Ejemplo
 
 En definitiva,  genera  datos en tiempo de ejecución. Además también podemos acelerar búsquedas y crear bucles más rápidos. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDU4NTUyMjUsLTE2OTcxMTI1MDYsLT
-EzNzQ4MjAzLDE4Nzc4Njk4OTcsMTM5NTIwMjEwOSwtMzEyODkz
-OTddfQ==
+eyJoaXN0b3J5IjpbMTY0NjM4OTM0MywtMTEwNTg1NTIyNSwtMT
+Y5NzExMjUwNiwtMTM3NDgyMDMsMTg3Nzg2OTg5NywxMzk1MjAy
+MTA5LC0zMTI4OTM5N119
 -->
