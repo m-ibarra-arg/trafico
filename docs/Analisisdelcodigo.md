@@ -1,4 +1,4 @@
-# Análisis del Código
+# Análisis de Colas con Python
 
 Ya hemos tenido una introducción sobre los modelos de cola, y una descripción de SimuladorQ. Pero como este trabajo está enmarcado en un Proyecto Final de Asignatura, detallaremos a continuación como trabaja el software. En la sección posterior mostraremos resultados del programa comparándolos con los valores obtenidos teóricamente.
 
@@ -133,7 +133,8 @@ Nuevamente aparece **env** para definir el entorno de simulación. El argumento 
             self.msg = (yield self.store.get())
             self.busy = 1
             self.byte_size -= self.msg.size
-            yield self.env.timeout(self.msg.size*8.0/self.rate)
+            delay =absyield self.env.timeout(self.msg.size*8.0/self.rate)
+            ut(delay)
             self.out.put(self.msg)
             self.sizes.append(self.msg.size)
             self.busy = 0
@@ -246,7 +247,7 @@ El tamaño de la cola no se pasa como parámetro de entrada de la función MM1, 
 Por último, en la definición de los componentes,  PortMonitor, el cual necesita la distribución de tiempos en que observará la cola. 
 ```python    
     #Parametros del Monitor 
-    Smd= 0.5
+    Smd = 0.5
     samp_dist = functools.partial(random.expovariate,Smd)
 ```
 Una vez cargados los parámetros de las clases de *SimComponents*, definimos cada uno de ellos. Vemos como creamos el entorno de simulación **env**, el cual se lo damos como entrada a las demás clases de *SimComponents*. 
@@ -352,7 +353,7 @@ Primero, vemos que ahora también se pasa como parámetro la distribución gener
 En esta función, ahora no existe más el parámetro $\mu$. Se pasa los valores de **a** y **b**. En la distribución Normal, representan la media y la desviación estándar respectivamente. En la Uniforme, los valores mínimo y máximo del rango que define la función de densidad de probabilidad.
 
 Ahora entonces, la tasa de servicio de la cola estará dada por
-$$ \mu = \left ( {\frac {{Media} *8}{rate}} \right )^{-1}$$
+$$ \mu = \left ( {\frac {{Media} \times*8}{rate}} \right )^{-1}$$
 
 donde la media de la Normal está definida en el argumento, y la de la distribución uniforme es $\frac{a+b}{2}$.
 
@@ -430,6 +431,6 @@ axis.set_ylabel("Frecuencia de ocurrencia")
 fig.savefig(directorio + "QueueHistogram_normal.png")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyNTgxNDg0NCwtMjgxMjg2OTU0LC04OD
-E5NjAyOF19
+eyJoaXN0b3J5IjpbLTExNjA5MTcxNjQsMTUyNTgxNDg0NCwtMj
+gxMjg2OTU0LC04ODE5NjAyOF19
 -->
