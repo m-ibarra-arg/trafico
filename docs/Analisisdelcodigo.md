@@ -353,7 +353,7 @@ Primero, vemos que ahora también se pasa como parámetro la distribución gener
 En esta función, ahora no existe más el parámetro $\mu$. Se pasa los valores de **a** y **b**. En la distribución Normal, representan la media y la desviación estándar respectivamente. En la Uniforme, los valores mínimo y máximo del rango que define la función de densidad de probabilidad.
 
 Ahora entonces, la tasa de servicio de la cola estará dada por
-$$ \mu = \left ( {\frac {{Media} \times*8}{rate}} \right )^{-1}$$
+$$ \mu = \left ( {\frac {{Media} \times8}{rate}} \right )^{-1}$$
 
 donde la media de la Normal está definida en el argumento, y la de la distribución uniforme es $\frac{a+b}{2}$.
 
@@ -431,6 +431,6 @@ axis.set_ylabel("Frecuencia de ocurrencia")
 fig.savefig(directorio + "QueueHistogram_normal.png")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjA5MTcxNjQsMTUyNTgxNDg0NCwtMj
-gxMjg2OTU0LC04ODE5NjAyOF19
+eyJoaXN0b3J5IjpbLTEyOTEzNzQxMDQsLTExNjA5MTcxNjQsMT
+UyNTgxNDg0NCwtMjgxMjg2OTU0LC04ODE5NjAyOF19
 -->
