@@ -1,5 +1,5 @@
 #  Herramientas 
-Para crear el SimuladorQ se utilizó python como lenguaje de programación, principalmente por las librerías a disposición que existen para la implementación, así también con la integración con Qt para el entorno gráfico. Se desarrollan estas herramientas a continuación.  
+Para crear el SimuladorQ se utilizó Python como lenguaje de programación, principalmente por las librerías a disposición que existen para la implementación, así también con la integración con Qt para el entorno gráfico. Se desarrollan estas herramientas a continuación.  
 
 ## Python
 [**Python**](https://www.python.org)  es un  lenguaje de programación  interpretado cuya filosofía hace hincapié en una sintaxis que favorezca un código legible. 
@@ -15,7 +15,7 @@ El entorno de desarrollo integrado (IDE) que se utilizo fue [**Spyder**](https:/
 
 Una simulación de eventos discretos es aquella en la que los cambios de estado de las variables se realizan en puntos discretos del tiempo accionados por eventos. Eventos de simulación típicos pueden incluir la llegada de un cliente, la falla de un recurso, la terminación de una actividad, la finalización de un turno de trabajo.
 
-Los procesos en SimPy están definidos por las funciones [**generator**](https://docs.python.org/3/glossary.html#term-generator) de Python y pueden, por ejemplo, usarse para modelar componentes activos como clientes, vehículos o agentes. SimPy también proporciona varios tipos de recursos compartidos para modelar puntos de congestión de capacidad limitada (como servidores, bfer y túneles).
+Los procesos en SimPy están definidos por las funciones [**generator**](https://docs.python.org/3/glossary.html#term-generator) de Python y pueden, por ejemplo, usarse para modelar componentes activos como clientes, vehículos o agentes. SimPy también proporciona varios tipos de recursos compartidos para modelar puntos de congestión de capacidad limitada (como servidores, buffer y túneles).
 
 Las simulaciones se pueden realizar en tiempo real o recorriendo manualmente los eventos.
 
@@ -50,5 +50,5 @@ Python es un lenguaje simple pero poderoso orientado a objetos. Su simplicidad h
 PyQt combina todas las ventajas de Qt y Python. Un programador tiene todo el poder de Qt, pero es capaz de explotarlo con la simplicidad de Python. Es por todo esto que utilizamos el binding antes mencionado para crear la interfaz gráfica de SimuladorQ.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MDk2MTgzMl19
+eyJoaXN0b3J5IjpbLTM3NjY3NzU0NSwxMDUwOTYxODMyXX0=
 -->
