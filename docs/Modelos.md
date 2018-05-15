@@ -18,7 +18,7 @@ $$ρ < 1$$
 
 Se puede ver esta relación como la capacidad de atender los paquetes que entran a la cola, o como estará cargado nuestro sistema.
 Si se cumple la condición de estacionariedad, las probabilidades de estado estable existen y están dadas por:
-$$ρ_n = ρ^n * (1-ρ) $$
+$$ρ_n = ρ^n  \, (1-ρ) $$
 donde $ρ_n$ es la probabilidad de que haya n  paquetes (o bytes) en el sistema.
 
 ### Las medidas de rendimiento
@@ -40,7 +40,7 @@ Se pueden encontrar relaciones entre las distintas medidas de eficiencia. Estas 
 
 $$W = W_q + \frac{1}{μ}$$ Esta relación es bastante intuitiva y se fundamenta en el siguiente razonamiento. Esta relación, no sólo se verifica en el modelo M/M/1 sino en cualquier modelo general de colas.
 
-$$L_q = λ W_q$$ Supongamos que un cliente llega al sistema. En promedio entrará al servicio después de un tiempo $W_q$. Supongamos que justo cuando va a entrar al servicio se da la vuelta y cuenta los clientes que están en cola detrás de él; en promedio ese número será $L_q$. Puesto que en promedio cada uno de los $L_q$ que están en la cola han tardado en llegar $\frac{1}{λ}$ respecto del anterior, el tiempo que ha estado esperando nuestro cliente en cola ha sido $L_q$ $\frac{1}{λ}$
+$$L_q = λ \, W_q$$ Supongamos que un cliente llega al sistema. En promedio entrará al servicio después de un tiempo $W_q$. Supongamos que justo cuando va a entrar al servicio se da la vuelta y cuenta los clientes que están en cola detrás de él; en promedio ese número será $L_q$. Puesto que en promedio cada uno de los $L_q$ que están en la cola han tardado en llegar $\frac{1}{λ}$ respecto del anterior, el tiempo que ha estado esperando nuestro cliente en cola ha sido $L_q$ $\frac{1}{λ}$
 
 $$L = λW$$  Esta expresión se conoce comúnmente como la fórmula de Little, pues se debe a un trabajo de Little de 1961. Se puede demostrar que esta  condición y la anterior se siguen verificando para un modelo de colas de un único canal con llegadas exponenciales y disciplina FIFO, sin importar la distribución del tiempo de servicio.
 
@@ -55,10 +55,9 @@ Este modelo, es una modificación del modelo M/M/1 que se basa en suponer que la
 
 Las probabilidades de estado:
 
-$$ p_{n}=\begin{cases}\dfrac {\left( 1-\rho\right) \rho ^{n}}{1-\rho^{K+1}},\rho\neq 1\\ \dfrac {1}{K+1},\rho =1\end{cases}$$
+$$ p_{n}=\begin{cases}\dfrac {\left( 1-\rho\right) \rho ^{n}}{1-\rho^{K+1}}, \; \rho\neq 1\\ \dfrac {1}{K+1}, \; \rho =1\end{cases}$$
 
-Observe que en este caso la solución para el estado estacionario existe incluso si ρ ≥ 1. Intuitivamente esto se debe a que la limitación en la capacidad del sistema
-provoca que éste no se desborde. También se observa que si $K → ∞$ y $ρ < 1$, entonces $p_n → (1-ρ) ρ^n$, lo cual es consistente con los resultados obtenidos en el modelo M/M/1.
+Observe que en este caso la solución para el estado estacionario existe incluso si ρ ≥ 1. Intuitivamente esto se debe a que la limitación en la capacidad del sistema provoca que éste no se desborde. También se observa que si $K → ∞$ y $ρ < 1$, entonces $p_n → (1-ρ) ρ^n$, lo cual es consistente con los resultados obtenidos en el modelo M/M/1.
 
 ### Medidas de Eficiencia
 Número medio de clientes en el sistema 
@@ -93,7 +92,7 @@ En este modelo, al tener una capacidad finita en la cola, una vez que ésta este
 
 Entonces pensamos la perdida como la tasa de arribo por la probabilidad que la cola este llena.
 
-$$Pérdida = \lambda * p_k$$
+$$Pérdida = \lambda \: p_k$$
 o también, la tasa de arribo menos la tasa efectiva que entra en la cola:
 $$Pérdida = \lambda - \lambda_{ef}$$
 
@@ -110,7 +109,7 @@ $$L_q =\frac{ λ^2σ^2 + ρ^2}{2(1-ρ)}$$
 Número medio de clientes en el sistema.
 $$L = L_q + ρ$$
 Tiempo medio de espera en la cola
-$$W_q = L_q λ$$
+$$W_q = L_q \, λ$$
 Tiempo medio en el sistema
 $$W = \frac{L}{\lambda}  = W_q + \frac{1}{μ}$$
 
@@ -120,5 +119,6 @@ Obsérvese que las medidas de eficiencia incrementan su valor conforme $σ^2$ au
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzk4NDg2OTEsMjE0NjI2ODg1OF19
+eyJoaXN0b3J5IjpbNDY1ODc0MTE5LC0yMDM5ODQ4NjkxLDIxND
+YyNjg4NThdfQ==
 -->
