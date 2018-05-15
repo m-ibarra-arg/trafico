@@ -49,7 +49,7 @@ Para todos los modelos, las variables de salida de la simulación realizada son:
  - Paquetes enviados
  - Paquetes servidos
  - Paquetes perdidos
-- Porcentaje de pérdida
+ - Pérdida
  - Intensidad de tráfico $\rho$
  - Número medio de bytes en la cola $L$
  - Número medio de bytes en el sistema $L_q$
@@ -132,6 +132,6 @@ Para empezar, el uso esta destinado a personas que ya tienen un conocimiento pre
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjExNDY1OTYsLTE2ODI5NzI5MTAsLT
-Q1NDQyODA1NiwyNzMwOTk5NzZdfQ==
+eyJoaXN0b3J5IjpbMTA5NDk1MjY5NiwtMTY2MTE0NjU5NiwtMT
+Y4Mjk3MjkxMCwtNDU0NDI4MDU2LDI3MzA5OTk3Nl19
 -->
