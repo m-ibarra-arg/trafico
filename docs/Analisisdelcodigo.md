@@ -133,8 +133,8 @@ Nuevamente aparece **env** para definir el entorno de simulación. El argumento 
             self.msg = (yield self.store.get())
             self.busy = 1
             self.byte_size -= self.msg.size
-            delay =absyield self.env.timeout(self.msg.size*8.0/self.rate)
-            ut(delay)
+            delay = abs(self.msg.size*8.0/self.rate)
+            yield self.env.timeout(delay)
             self.out.put(self.msg)
             self.sizes.append(self.msg.size)
             self.busy = 0
@@ -431,6 +431,7 @@ axis.set_ylabel("Frecuencia de ocurrencia")
 fig.savefig(directorio + "QueueHistogram_normal.png")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTEzNzQxMDQsLTExNjA5MTcxNjQsMT
-UyNTgxNDg0NCwtMjgxMjg2OTU0LC04ODE5NjAyOF19
+eyJoaXN0b3J5IjpbMTUxMDkxNzE3LC0xMjkxMzc0MTA0LC0xMT
+YwOTE3MTY0LDE1MjU4MTQ4NDQsLTI4MTI4Njk1NCwtODgxOTYw
+MjhdfQ==
 -->
