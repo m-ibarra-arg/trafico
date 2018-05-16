@@ -381,7 +381,6 @@ Para el caso de los tiempos de inter-arribos de paquetes tenemos que analizar co
                         rec_arrivals=rec_arrivalsSink, 
                         absolute_arrivals=abs_arrivalsSink)
 ```
-El servidor esta definido para que no se muestre en el programa lo que llega al servidor, porque no nos enfocamos en el específicamente, sino en la cola, y lo que entra, transcurre y sale de ella. Además solo nos interesan los tiempos entre arribos consecutivos, y no los absolutos.
 La variable `psink` indica que recibe paquetes y recopila información de delay en la lista de espera de paquetes.
 
 Ahora bien, para graficar el histograma, se realiza de la siguiente forma:
@@ -431,7 +430,7 @@ axis.set_ylabel("Frecuencia de ocurrencia")
 fig.savefig(directorio + "QueueHistogram_normal.png")
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDkxNzE3LC0xMjkxMzc0MTA0LC0xMT
-YwOTE3MTY0LDE1MjU4MTQ4NDQsLTI4MTI4Njk1NCwtODgxOTYw
-MjhdfQ==
+eyJoaXN0b3J5IjpbLTE2NTU5NDY2ODYsMTUxMDkxNzE3LC0xMj
+kxMzc0MTA0LC0xMTYwOTE3MTY0LDE1MjU4MTQ4NDQsLTI4MTI4
+Njk1NCwtODgxOTYwMjhdfQ==
 -->
