@@ -63,11 +63,11 @@ Observe que en este caso la solución para el estado estacionario existe incluso
 Número medio de clientes en el sistema 
 $$ L=\rho \frac {\left [1 - (K+1)\rho^K  + K \rho^{K+1} \right ]} {(1-\rho^{K+1})(1- \rho)}$$
 
-cuando $\rho = 1$
+cuando $\rho \neq 1$
 
 $$L=\frac{K}{2}$$
 
-cuando $\rho \neq 1$
+cuando $\rho = 1$
 
 Tamaño medio de la cola
 $$L_q = L - (1-p_0)$$
@@ -119,6 +119,6 @@ Obsérvese que las medidas de eficiencia incrementan su valor conforme $σ^2$ au
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY1ODc0MTE5LC0yMDM5ODQ4NjkxLDIxND
-YyNjg4NThdfQ==
+eyJoaXN0b3J5IjpbLTIwODY1ODIzMjksNDY1ODc0MTE5LC0yMD
+M5ODQ4NjkxLDIxNDYyNjg4NThdfQ==
 -->
