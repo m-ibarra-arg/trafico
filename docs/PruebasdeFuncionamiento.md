@@ -247,7 +247,7 @@ Con un sistema recargado, $\rho>1$:
 |$K$          	|20		|$W_q$     	|1.13170	|1.2694
 |      			|			|$Loss$ 	|3.0279		|3.0279
 
-La perdida es considerable. Tenemos una longitud de la cola, u ocupación media del sistema, casi del %75 de la longitud de la misma.
+La perdida es considerable. Tenemos una longitud de la cola, u ocupación media del sistema, casi del 75% de la longitud de la misma.
 
 ![Tiempo inter-arribo Simulador](https://github.com/maxxxis182/trafico/blob/master/docs/img/prueba_11/ArrivalHistogram_normal.png?raw=true )
 
@@ -260,7 +260,7 @@ Vemos como se va llenando la cola de forma exponencial.
 Se deja una primera impresión de los resultados de este simulador y los valores de entrada, que en una primera instancia, nos dejan resultados aceptables para discutir el funcionamiento de cada modelo. Queda en el estudiante variar todos los parámetros y ver como responde cada sistema. 
 Como todo proyecto en su primera versión de desarrollo, quedarán problemas para resolver en el futuro. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyODY0MDEwNSwtMTI1MjIxOTQ2MCwxNj
-k2MzY5ODQwLDE1Mjk1MzM2MTgsLTE2NzY2NDYyMTgsLTkxMjY2
-MTA1NiwtMTA2MDc3OTMwNV19
+eyJoaXN0b3J5IjpbOTE3ODQ5MDUxLC0zMjg2NDAxMDUsLTEyNT
+IyMTk0NjAsMTY5NjM2OTg0MCwxNTI5NTMzNjE4LC0xNjc2NjQ2
+MjE4LC05MTI2NjEwNTYsLTEwNjA3NzkzMDVdfQ==
 -->
